@@ -101,7 +101,7 @@ header {
 }
 
 .home-buttons {
-    padding: 60px;
+    padding-top: 60px;
 }
 
 .home-btn {
@@ -300,7 +300,7 @@ header {
     .home-buttons {
         justify-content: center;
         align-items: center;
-        padding: 50px;
+        padding-top: 50px;
     }
     
     .btn, .home-btn {
