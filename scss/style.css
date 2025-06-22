@@ -11,10 +11,10 @@ body {
 
 .bg-home { background-color: #EA9ECE; }
 .bg-about { background-color: #ffcdec; }
-.bg-skills { background-color: #fcdcf0; }
-.bg-projects { background-color: #f2e0ff; }
+.bg-skills { background-color: #fef3d5; }
+.bg-projects { background-color: #e0f5ff; }
 .bg-involvement { background-color: #e8c9ff; }
-.bg-contacts { background-color: #f2e0ff; }
+.bg-contacts { background-color: #f1e4fb; }
 
 #mainNavbar {
   background-color: transparent;
