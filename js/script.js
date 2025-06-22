@@ -6,7 +6,7 @@ const sections = document.querySelectorAll("section");
 window.addEventListener("scroll", function () {
   const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-  if (scrollTop === 0) {
+  if (scrollTop <= 150) {
     // At top of page
     navbar.classList.remove("nav-scrolled", "nav-hidden");
   } else if (scrollTop > lastScrollTop) {

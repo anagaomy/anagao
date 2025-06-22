@@ -16,16 +16,18 @@ body {
 .bg-involvement { background-color: #EA9ECE; }
 .bg-contacts { background-color: #ffcdec; }
 .bg-project-home { background-color: #EA9ECE; }
+.bg-involvement-home { background-color: #EA9ECE; }
 
 #mainNavbar {
   background-color: transparent;
-  transition: all 0.2s ease;
+  transition: all 0.5s ease;
   box-shadow: none;
 }
 
 /* Navbar when scrolling up */
 .nav-scrolled {
-  background-color: rgba(255, 255, 255, 0.5) !important;
+  background-color: rgba(255, 255, 255, 0.75) !important;
+  backdrop-filter: blur(10px);
   /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
 }
 
@@ -107,6 +109,10 @@ main {
 
 #about {
     padding-top: 200px;
+}
+
+#about p {
+    font-weight: 300;
 }
 
 .about-title {
@@ -272,10 +278,11 @@ main {
     fill: white;
 }
 
-.arrow-button:hover {
-    /* fill: #e8c9ff; */
-    fill: black;
-    border-width: 1px;
+.arrow-button:hover {    
+    fill: #EA9ECE;
+    border-width: 2px;
+    transform: scale(1.2);
+    transition: all 0.2s ease;
 }
 
 .card-list {
@@ -284,7 +291,7 @@ main {
     padding-left: 35px;
 }
 
-#project-home {
+#project-home, #involvement-home {
     height: 80vh;
     display: flex;
     justify-content: center;
@@ -292,8 +299,10 @@ main {
     text-align: center;
 }
 
-#project-home .title {
+.page-title {
     font-weight: 2000;
     font-size: 70px;
     /* margin: 40px auto; */
 }
+
+.page-subtitle {}
