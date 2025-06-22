@@ -9,12 +9,13 @@ body {
     background-color: #EA9ECE;
 }
 
-.bg-home { background-color: #EA9ECE; }
-.bg-about { background-color: #ffcdec; }
-.bg-skills { background-color: #fef3d5; }
-.bg-projects { background-color: #e0f5ff; }
-.bg-involvement { background-color: #e8c9ff; }
-.bg-contacts { background-color: #f1e4fb; }
+.bg-home { background-color: #e8c9ff; }
+.bg-about { background-color: #eddbfb; }
+.bg-skills { background-color: #e0f5ff; }
+.bg-projects { background-color: #fef3d5; }
+.bg-involvement { background-color: #EA9ECE; }
+.bg-contacts { background-color: #ffcdec; }
+.bg-project-home { background-color: #EA9ECE; }
 
 #mainNavbar {
   background-color: transparent;
@@ -63,7 +64,8 @@ main {
 }
 
 #home {
-    margin-top: 180px;
+    height: 95vh;
+    display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -73,7 +75,7 @@ main {
     padding-top: 50px;
 }
 
-#home .name {
+#home .title {
     /* font-family: "Alfa Slab One", "Anton", "Alfa Slab One", "Abril Fatface", "DM Serif Text", serif; */
     /* font-family: "Poiret One", "Roboto Mono", serif; */
     font-weight: 2000;
@@ -267,7 +269,7 @@ main {
 }
 
 .arrow-button {
-    fill: #ffce47;
+    fill: white;
 }
 
 .arrow-button:hover {
@@ -280,4 +282,18 @@ main {
     text-align: left;
     list-style-position: inside; 
     padding-left: 35px;
+}
+
+#project-home {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#project-home .title {
+    font-weight: 2000;
+    font-size: 70px;
+    /* margin: 40px auto; */
 }
