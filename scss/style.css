@@ -282,7 +282,7 @@ main {
     fill: #EA9ECE;
     border-width: 2px;
     transform: scale(1.2);
-    transition: all 0.2s ease;
+    transition-duration: 0.2s;
 }
 
 .card-list {
@@ -305,4 +305,6 @@ main {
     /* margin: 40px auto; */
 }
 
-.page-subtitle {}
+.page-subtitle {
+    margin-top: 10px;
+}
