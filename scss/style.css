@@ -10,8 +10,9 @@ body {
 }
 
 .bg-home { background-color: #e8c9ff; }
-.bg-about { background-color: #eddbfb; }
-.bg-skills { background-color: #e0f5ff; }
+/* .bg-about { background-color: #e8c9ff; } */
+.bg-work { background-color: #e8c9ff; }
+/* .bg-skills { background-color: #e0f5ff; } */
 .bg-projects { background-color: #fef3d5; }
 .bg-involvement { background-color: #EA9ECE; }
 .bg-contacts { background-color: #ffcdec; }
@@ -101,7 +102,7 @@ main {
     transition: background-color 0.3s, color 0.3s;
 }
 
-.skills-title, .contact-title, .projects-title, .involvement-title {
+.work-title, .skills-title, .contact-title, .projects-title, .involvement-title {
     /* font-family: "Poiret One", "Roboto Mono", serif; */
     /* font-weight: bold; */
     font-size: 40px;
@@ -152,9 +153,59 @@ main {
 }
 
 
-#skills, #projects, #involvement {
+#work, #skills, #projects, #involvement {
     padding-top: 200px;
     text-align: center;
+}
+
+.work-container {
+    margin: auto 60px;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.work-intro {
+    justify-content: left;
+    text-align: left;
+}
+
+.work-subtitle {
+    margin: 0 0 10px 0;
+    font-size: 26px;
+    font-weight: 400;
+    font-family: "Roboto", "Noto Sans", serif;
+}
+
+.skill-lists {
+    text-align: left;
+    list-style-position: inside; 
+    justify-content: center;
+    align-items: center;
+    padding-right: 100px;
+    margin-top: 20px;
+}
+
+.yami-logo {
+    flex: 1;
+    display: flex;
+    margin-left: 10%;
+    justify-content: left;
+    align-items: center;
+}
+
+.yami-logo img:hover {
+    transform: scale(1.1);
+    transition-duration: 0.2s;
+}
+
+.yami-logo img{
+    width: 40%;
+    height: auto;
+    border-radius: 100%;
+    box-shadow: 2px 4px 6px rgba(152, 152, 152, 0.1);
 }
 
 .skills-part {
@@ -271,23 +322,56 @@ main {
     object-fit: cover;
     object-position: top;
     width: 100%;
+    background-color: white;
+}
+
+.arrow-button-container {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    margin-bottom: 8px;
 }
 
 .arrow-button {
+    position: absolute;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
     fill: white;
+    opacity: 0;
+    transition: all 0.2s ease;
 }
 
-.arrow-button:hover {    
+.arrow-button-outline {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    fill: white;
+    transition: all 0.2s ease;
+}
+
+.col:hover .arrow-button-outline {
+    opacity: 0;
+}
+
+.col:hover .arrow-button {
+    opacity: 1;
     fill: #EA9ECE;
-    border-width: 2px;
     transform: scale(1.2);
-    transition-duration: 0.2s;
+    border-width: 2px;
 }
 
 .card-list {
-    text-align: left;
+    text-align: center;
     list-style-position: inside; 
-    padding-left: 35px;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px 10px 10px;
+    margin-top: 20px;
 }
 
 .work-date {
@@ -313,7 +397,7 @@ main {
     margin-top: 30px;
 }
 
-.project-header {
+.project-header, .work-header {
     display: flex;
     align-items: center; 
     gap: 10px;        
