@@ -9,7 +9,7 @@ body {
     background-color: #EA9ECE;
 }
 
-.bg-home { background-color: #e8c9ff; }
+/* .bg-home { background-color: #e8c9ff; } */
 /* .bg-about { background-color: #e8c9ff; } */
 .bg-work { background-color: #e8c9ff; }
 /* .bg-skills { background-color: #e0f5ff; } */
@@ -81,8 +81,8 @@ main {
 
 #home .title {
     /* font-family: "Alfa Slab One", "Anton", "Alfa Slab One", "Abril Fatface", "DM Serif Text", serif; */
-    font-family: "Poiret One", "Roboto Mono", serif;
-    font-weight: bolder;
+    /* font-family: "Poiret One", "Roboto Mono", serif; */
+    font-weight: bold;
     font-size: 100px;
     margin: 40px auto;
 }
@@ -164,11 +164,18 @@ main {
     grid-template-columns: 60% 40%;
     align-items: center;
     justify-content: space-between;
-    
 }
 
-.work-intro {
-    justify-content: left;
+.work-col {
+    margin: 0;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.works-list {
+    justify-content: start;
     text-align: left;
 }
 
@@ -177,6 +184,12 @@ main {
     font-size: 26px;
     font-weight: 400;
     font-family: "Roboto", "Noto Sans", serif;
+}
+
+.work-intro {
+    justify-self: start;
+    text-align: left;
+    align-items: start;
 }
 
 .skill-lists {
@@ -191,9 +204,9 @@ main {
 .yami-logo {
     flex: 1;
     display: flex;
-    margin-left: 10%;
     justify-content: left;
     align-items: center;
+    margin-bottom: 10px;
 }
 
 .yami-logo img:hover {
@@ -202,7 +215,7 @@ main {
 }
 
 .yami-logo img{
-    width: 40%;
+    width: 20%;
     height: auto;
     border-radius: 100%;
     box-shadow: 2px 4px 6px rgba(152, 152, 152, 0.1);

@@ -37,3 +37,26 @@ const observer = new IntersectionObserver(
 sections.forEach((section) => {
   observer.observe(section);
 });
+
+// work skill lists 
+const skillContainer = document.querySelector('.skill-lists');
+
+const skills = [
+  'Marketing', 
+  'Social Media', 
+  'Content creation', 
+  'Customer acquisition', 
+  'Event management', 
+  'Leadership', 
+  'Growth strategy', 
+  'Data analysis'
+];
+
+skills.forEach(skill => {
+  const skillDiv = document.createElement('div');
+  skillDiv.className = 'btn btn-light rounded-5 mt-md-2 disabled';
+  skillDiv.style.cssText = 'font-size: 17px; border-width: 0; margin-right: 5px';
+  skillDiv.textContent = skill;
+
+  skillContainer.appendChild(skillDiv);
+});
