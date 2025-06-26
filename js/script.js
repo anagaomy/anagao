@@ -43,13 +43,13 @@ const skillContainer = document.querySelector('.skill-lists');
 
 const skills = [
   'Marketing', 
+  'Growth Strategy', 
+  'Data Analysis',
   'Social Media', 
-  'Content creation', 
-  'Customer acquisition', 
-  'Event management', 
-  'Leadership', 
-  'Growth strategy', 
-  'Data analysis'
+  'Content Creation', 
+  'Leadership',
+  'Event Management', 
+  'Customer Acquisition', 
 ];
 
 skills.forEach(skill => {

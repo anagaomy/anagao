@@ -2,18 +2,25 @@ body {
     margin: auto 100px;
     padding: 60px 120px;
     font-family: "Roboto", "Noto Sans", serif;
-    transition: background-color 0.5s ease;
+    transition: background-color 0.7s ease;
 }
 
 .body {
     background-color: #EA9ECE;
 }
 
-/* .bg-home { background-color: #e8c9ff; } */
-/* .bg-about { background-color: #e8c9ff; } */
+.bg-home { background: 
+            radial-gradient(circle at top left, rgba(255, 182, 193, 0.75) 100px, transparent 600px),
+            radial-gradient(circle at 50% 10%, rgba(255, 182, 193, 0.75) 100px, transparent 500px),
+            white;
+            background-color: white;
+            transition: background 1s ease; 
+        }
+/* .bg-about { background-color: white;} */
 .bg-work { background-color: #e8c9ff; }
 /* .bg-skills { background-color: #e0f5ff; } */
-.bg-projects { background-color: #fef3d5; }
+/* .bg-projects { background-color: #fef3d5; } */
+.bg-projects { background-color: black; color: white;}
 .bg-involvement { background-color: #EA9ECE; }
 .bg-contacts { background-color: #ffcdec; }
 .bg-project-home { background-color: #EA9ECE; }
@@ -115,9 +122,11 @@ main {
 
 #about p {
     font-weight: 300;
+    /* color: white; */
 }
 
 .about-title {
+    /* color: white; */
     font-size: 40px;
     margin-top: 10px;
     margin-bottom: 30px;
