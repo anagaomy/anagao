@@ -2,29 +2,28 @@ body {
     margin: auto 100px;
     padding: 60px 120px;
     font-family: "Roboto", "Noto Sans", serif;
-    transition: background-color 0.7s ease;
+    transition: background-color 0.5s ease;
 }
 
 .body {
-    background-color: #EA9ECE;
+    background-color: white;
 }
 
-.bg-home { background: 
-            radial-gradient(circle at top left, rgba(255, 182, 193, 0.75) 100px, transparent 600px),
-            radial-gradient(circle at 50% 10%, rgba(255, 182, 193, 0.75) 100px, transparent 500px),
-            white;
-            background-color: white;
-            transition: background 1s ease; 
-        }
-/* .bg-about { background-color: white;} */
-.bg-work { background-color: #e8c9ff; }
-/* .bg-skills { background-color: #e0f5ff; } */
-/* .bg-projects { background-color: #fef3d5; } */
-.bg-projects { background-color: black; color: white;}
-.bg-involvement { background-color: #EA9ECE; }
-.bg-contacts { background-color: #ffcdec; }
+.bg-home { 
+    /* background: radial-gradient(circle at top left, rgba(255, 182, 193, 0.75) 100px, transparent 600px),
+            radial-gradient(circle at 50% 10%, rgba(255, 182, 193, 0.75) 100px, transparent 500px), white; */
+    background: radial-gradient(circle at 50% 7%, rgba(255, 180, 203, 0.85) 100px, transparent 600px), white;
+    transition: background 1s ease; 
+    background-color: rgba(255, 255, 255, 0.75);
+}
+.bg-about { background-color: white; }
+.bg-work { background-color: #ffb4cb; } /* e8c9ff */
+.bg-skills { background-color: white; }
+.bg-projects { background-color: black; color: white; }
+.bg-involvement { background-color: #ffb4cb; }
+.bg-contacts { background-color: #ffb4cb; }
 .bg-project-home { background-color: #EA9ECE; }
-.bg-involvement-home { background-color: #EA9ECE; }
+.bg-involvement-home { background-color: #ffb4cb; }
 .bg-projects-main { background-color: #ffcdec; }
 
 #mainNavbar {
@@ -206,7 +205,6 @@ main {
     list-style-position: inside; 
     justify-content: center;
     align-items: center;
-    padding-right: 90px;
     margin-top: 20px;
 }
 
@@ -228,6 +226,18 @@ main {
     height: auto;
     border-radius: 100%;
     box-shadow: 2px 4px 6px rgba(152, 152, 152, 0.1);
+}
+
+.work-description {
+    text-align: left;
+    font-size: 18px;
+    font-weight: 300;
+    font-family: "Roboto", "Noto Sans", serif;
+    padding: 1% 2% 1% 2%;
+}
+
+.work-icon {
+    font-size: 35px;
 }
 
 .skills-part {
@@ -300,6 +310,11 @@ main {
     margin-bottom: 10px;
 }
 
+.contact-icon {
+    font-size: 50px;
+    color: black;
+}
+
 .carousel-img {
     display: block;
     height: 550px;
@@ -353,47 +368,41 @@ main {
     width: 40px;
     height: 40px;
     cursor: pointer;
-    margin-bottom: 8px;
+    margin-bottom: 15px;
 }
 
 .arrow-button {
+    font-size: 35px;
+    margin: 15px 0 15px 0;
     position: absolute;
     top: 0;
     left: 0;
     justify-content: center;
     align-items: center;
-    fill: white;
-    opacity: 0;
+    color: rgb(13, 13, 13);
+    opacity: 1;
     transition: all 0.2s ease;
 }
 
 .arrow-button-outline {
+    font-size: 35px;
+    margin: 15px 0 15px 0;
     position: absolute;
     top: 0;
     left: 0;
-    opacity: 1;
-    fill: white;
+    opacity: 0;
+    color: black;
     transition: all 0.2s ease;
 }
 
-.col:hover .arrow-button-outline {
+.col:hover .arrow-button {
     opacity: 0;
 }
 
-.col:hover .arrow-button {
+.col:hover .arrow-button-outline {
     opacity: 1;
-    fill: #EA9ECE;
-    transform: scale(1.2);
+    transform: scale(1.1);
     border-width: 2px;
-}
-
-.card-list {
-    text-align: center;
-    list-style-position: inside; 
-    justify-content: center;
-    align-items: center;
-    padding: 0 10px 10px 10px;
-    margin-top: 20px;
 }
 
 .work-date {
@@ -497,3 +506,4 @@ main {
 .project-img-wrapper:hover .project-img-overlay {
     opacity: 1;
 }
+
