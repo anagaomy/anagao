@@ -17,7 +17,7 @@ body {
     background-color: rgba(255, 255, 255, 0.75);
 }
 .bg-about { background-color: white; }
-.bg-work { background-color: #ffb4cb; } /* e8c9ff */
+.bg-work { background-color: #ffb4cb; }
 .bg-skills { background-color: white; }
 .bg-projects { background-color: black; color: white; }
 .bg-involvement { background-color: #ffb4cb; }
@@ -242,15 +242,15 @@ main {
 
 .skills-part {
     display: flex;
-    margin-left: 50px;
+    margin-left: 40px;
     justify-content: left;
     flex-wrap: wrap;
-    gap: 53px;
+    gap: 50px;
 }
 
 .skill img {
-    width: 80px;
-    height: 80px;
+    width: 70px;
+    height: 70px;
     margin-bottom: 10px;
 }
 
@@ -262,6 +262,7 @@ main {
 }
 
 .skill {
+    font-size: 14px;
     text-align: center;
     animation: float 4s ease-in-out infinite;
     transition: transform 0.3s;
@@ -473,7 +474,7 @@ main {
     border-radius: 20px;
     object-fit: contain;
     object-position: center;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.5);
 }
 
 .grid-image {
