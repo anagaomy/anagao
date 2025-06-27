@@ -6,7 +6,7 @@ body {
 }
 
 .body {
-    background-color: white;
+    background-color: #fff3f6;
 }
 
 .bg-home { 
@@ -16,15 +16,16 @@ body {
     transition: background 1s ease; 
     background-color: rgba(255, 255, 255, 0.75);
 }
-.bg-about { background-color: white; }
+.bg-about { background-color: #fff3f6; }
 .bg-work { background-color: #ffb4cb; }
-.bg-skills { background-color: white; }
+.bg-skills { background-color: #fff3f6; }
 .bg-projects { background-color: black; color: white; }
 .bg-involvement { background-color: #ffb4cb; }
-.bg-contacts { background-color: #ffb4cb; }
-.bg-project-home { background-color: #EA9ECE; }
+.bg-contacts { background-color: #fff3f6; }
+/* .bg-project-home { background-color: #EA9ECE; } */
+.bg-project-home { background-color: #ffb4cb; }
 .bg-involvement-home { background-color: #ffb4cb; }
-.bg-projects-main { background-color: #ffcdec; }
+.bg-projects-main { background-color: black; }
 
 #mainNavbar {
   background-color: transparent;
@@ -338,7 +339,7 @@ main {
     left: 0;
     height: 100%;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.5);
     /* background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.4)); */
     opacity: 0;
     transition: opacity 0.3s ease;
@@ -492,7 +493,7 @@ main {
     left: 0;
     height: 100%;
     width: 100%;
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.4));
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.75));
     opacity: 0;
     transition: opacity 0.3s ease;
     z-index: 2;
@@ -508,3 +509,9 @@ main {
     opacity: 1;
 }
 
+.involvement-header {
+    display: flex;
+    align-items: center; 
+    gap: 10px;
+    margin-bottom: 20px;        
+}
