@@ -67,71 +67,72 @@ EMAIL: gaomy@uci.edu
 
             <section id="projects-main">
                 <div class="project-grid">
-                    <div class="project-img-wrapper">
+
+                <!-- Button trigger modal -->
+                    <button class="project-img-wrapper" type="button" data-bs-toggle="modal" data-bs-target="#medimateModal">
                         <img class="grid-image" src="images/projects/medimate/dashboard.png">
-                        <div class="project-img-overlay">
-                            <div class="carousel-caption d-none d-md-block" style="color: white;">
-                                <h5>🏥 Medimate+</h5>
-                                <p>description of the project</p>
-                                <div class="technology-lists-1"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-img-wrapper">
-                        <img id="sleeptracker-demo" src="images/projects/sleeptracker/sleeptracker-demo.GIF" alt="">
-                        <!-- <iframe width="315" height="560" class="grid-image" src="https://www.youtube.com/embed/rgn8NQtAel4?autoplay=1&mute=1&controls=0&loop=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> -->
-                        <div class="project-img-overlay">
-                            <div class="carousel-caption d-none d-md-block" style="color: white;">
-                                <h5>💤 Sleep Tracker</h5>
-                                <p>description of the project</p>
-                                <div class="technology-lists-2"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-img-wrapper">
+                    </button>
+                    <button class="project-img-wrapper mt-md-4" type="button" data-bs-toggle="modal" data-bs-target="#sleeptrackerModal">
+                        <img id="sleeptracker-demo" src="images/projects/sleeptracker/sleeptracker-demo.GIF">
+                    </button>
+                    <button class="project-img-wrapper" type="button" data-bs-toggle="modal" data-bs-target="#spotifyModal">
                         <img class="grid-image" src="images/projects/spotify_browser/spotify-browser-demo.GIF">
-                        <div class="project-img-overlay">
-                            <div class="carousel-caption d-none d-md-block" style="color: white;">
-                                <h5>🎵 Spotify Browser</h5>
-                                <p>description of the project</p>
-                                <div class="technology-lists-3"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-img-wrapper">
+                    </button>
+                    <button class="project-img-wrapper" type="button" data-bs-toggle="modal" data-bs-target="#chatModal">
                         <img class="grid-image" src="images/projects/DSPchat/DSP-chat.jpeg">
-                        <div class="project-img-overlay">
-                            <div class="carousel-caption d-none d-md-block" style="color: white;">
-                                <h5>💬 Distributed Social Messenger</h5>
-                                <p>description of the project</p>
-                                <div class="technology-lists-4"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-img-wrapper">
+                    </button>
+                    <button class="project-img-wrapper" type="button" data-bs-toggle="modal" data-bs-target="#runkeeperModal">
                         <img class="grid-image" src="images/projects/runkeeper/runkeeper-demo.GIF">
-                        <div class="project-img-overlay">
-                            <div class="carousel-caption d-none d-md-block" style="color: white;">
-                                <h5>🏃 Runkeeper Tweet Report</h5>
-                                <p>description of the project</p>
-                                <div class="technology-lists-5"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-img-wrapper">
+                    </button>
+                    <button class="project-img-wrapper" type="button" data-bs-toggle="modal" data-bs-target="#canvasModal">
                         <img class="grid-image" src="images/projects/canvas/dashboard.png">
-                        <div class="project-img-overlay">
-                            <div class="carousel-caption d-none d-md-block" style="color: white;">
-                                <h5>🎨 Canvas UI Redesign</h5>
-                                <p>description of the project</p>
-                                <div class="technology-lists-6"></div>
+                    </button>
+
+                 <!-- Modal -->
+                    <div class="modal fade" id="medimateModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                            <div class="modal-content rounded-5 project-modal" style="background-color: rgba(255, 255, 255, 0.75); backdrop-filter: blur(10px);">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">🏥 Medimate+</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>a description of the project </p>
+                                    <iframe class="youtube-video" src="https://www.youtube.com/embed/HSwBGuq-D-E?autoplay=1&mute=1&controls=0&loop=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                                    <h6>About</h6>
+                                    <p>hi</p>
+                                    <h6>Technologies</h6>
+                                    <p>hi</p>
+                                    <div class="project-links">
+                                        <div class="project-link">
+                                            <a href="" target="_blank">
+                                                <i class="bi bi-github link-icon"></i>
+                                            </a>
+                                        </div>
+                                        <div class="project-link">
+                                            <a href="" target="_blank">
+                                                <i class="bi bi-globe2 link-icon"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <!-- <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Understood</button>
+                                </div> -->
                             </div>
                         </div>
                     </div>
+
+                    <div class="modal fade" id="sleeptrackerModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true"></div>
+                    <div class="modal fade" id="spotifyModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true"></div>
+                    <div class="modal fade" id="chatModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true"></div>
+                    <div class="modal fade" id="runkeeperModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true"></div>
+                    <div class="modal fade" id="canvasModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true"></div>
+
                 </div>
-
             </section>
-
 
         </main>
 
