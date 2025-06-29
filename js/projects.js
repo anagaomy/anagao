@@ -1,208 +1,164 @@
-// project titles
-const projectTitles = [ 
-    "🏥 Medimate+", "💤 Sleep Tracker",
-    "🎵 Spotify Browser",
-    "💬 Distributed Social Messenger",
-    "🏃 Runkeeper Tweet Report",
-    "🎨 Canvas UI Redesign"
-];
-
-// project-description 
-const projectDescription = [
-    "description of the project",
-    "...",
-    "...",
-    "...",
-    "...",
-    "..."
-];
-
-// project abouts
-const projectAbout = [
-    "about the project",
-    "...",
-    "...",
-    "...",
-    "...",
-    "..."
-];
-
-// Project technology lists
-const technologySets = [
-  // Medimate+
-  ["React", "HTML", "CSS", "Javascript", "Vercel", "Render", "PostgreSQL", "Node.js/Express", "OpenAI API", "Google Map API"],
-  // sleeptracker
-  ["Ionic", "HTML", "Scss", "Javascript", "Typescript", "Node.js"], 
-  // spotify browser
-  ["Angular", "HTML", "CSS", "Typescript", "Javascript", "Spotify API", "Node.js/Express"],
-  // Messanger
-  ["Python","Tkinter", "JSON", "Web API"],
-  // Runkeeper
-  ["HTML", "CSS", "Javascript", "Typescript"],
-  // Canvas
-  ["Figma", "Prototype", "Wireframe", "Hi-Fi Mockup"]
-];
-
-
-// Youtube video links
-const youtubeLinks = [
-    "https://www.youtube.com/embed/HSwBGuq-D-E?autoplay=1&mute=1&controls=0&loop=1",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-];
-
-
-// project github links
-const githubLinks = [
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-];
-
-
-// project website links
-const webLinks = [
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
+const projects = [
+    {
+        id: "medimateModal",
+        title: "🏥 Medimate+", 
+        description: "description of the project",
+        about: "about the project",
+        technologies: ["React", "HTML", "CSS", "Javascript", "Vercel", "Render", "PostgreSQL", "Node.js/Express", "OpenAI API", "Google Map API"],
+        youtubeLink: "https://www.youtube.com/embed/HSwBGuq-D-E?autoplay=1&mute=1&controls=0&loop=1",
+        githubLink: "https://github.com",
+        webLink: "https://medimate-chi.vercel.app/dashboard",
+        imgSrc: "images/projects/medimate/dashboard.png"
+    },
+    {
+        id: "sleeptrackerModal",
+        title: "😴 Sleep Tracker",
+        description: "description of the project",
+        about: "about the project",
+        technologies: ["Ionic", "HTML", "Scss", "Javascript", "Typescript", "Node.js"], 
+        youtubeLink: "https://www.youtube.com/embed/rgn8NQtAel4?autoplay=1&mute=1&controls=0&loop=1",        
+        githubLink: "https://github.com",
+        webLink: "",
+        imgSrc: "images/projects/sleeptracker/sleeptracker-demo.GIF"
+    },
+    {
+        id: "spotifyModal",
+        title: "🎵 Spotify Browser",
+        description: "description of the project",
+        about: "about the project",
+        technologies: ["Angular", "HTML", "CSS", "Typescript", "Javascript", "Spotify API", "Node.js/Express"],
+        youtubeLink: "https://www.youtube.com/embed/DWUlPqBxBPc?autoplay=1&mute=1&controls=0&loop=1",        
+        githubLink: "https://github.com",
+        webLink: "",
+        imgSrc: "images/projects/spotify_browser/spotify-browser-demo.GIF"
+    },
+    {
+        id: "chatModal",
+        title: "💬 Distributed Social Messenger",
+        description: "description of the project",
+        about: "about the project",
+        technologies: ["Python","Tkinter", "JSON", "Web API"],
+        youtubeLink: "",        
+        githubLink: "https://github.com",
+        webLink: "",
+        imgSrc: "images/projects/DSPchat/DSP-chat.jpeg"
+    },
+    {
+        id: "runkeeperModal",
+        title: "🏃 Runkeeper Tweet Report",
+        description: "description of the project",
+        about: "about the project",
+        technologies: ["HTML", "CSS", "Javascript", "Typescript"],
+        youtubeLink: "https://www.youtube.com/embed/c3pllqUbVHw?autoplay=1&mute=1&controls=0&loop=1",        
+        githubLink: "https://github.com",
+        webLink: "",
+        imgSrc: "images/projects/runkeeper/runkeeper-demo.GIF"
+    },
+    {
+        id: "canvasModal",
+        title: "🎨 Canvas UI Redesign",
+        description: "description of the project",
+        about: "about the project",
+        technologies: ["Figma", "Prototype", "Wireframe", "Hi-Fi Mockup"],
+        youtubeLink: "https://www.youtube.com/embed/9Imvim1OI8U?autoplay=1&mute=1&controls=0&loop=1",        
+        githubLink: "https://github.com",
+        webLink: "",
+        imgSrc: "images/projects/canvas/dashboard.png"
+    },
 ];
 
 
-// add project image wrapper
-const projectImgWrapper = document.querySelectorAll(".project-img-wrapper");
-projectImgWrapper.forEach((wrapper) => {
-    const ImgOverlayDiv = document.createElement("div");
-    ImgOverlayDiv.className = "project-img-overlay";
-
-    const carouselCaption = document.createElement("div");
-    carouselCaption.className = "carousel-caption d-none d-md-block";
-    carouselCaption.style.cssText = "color: white; padding-bottom: 0px";
-    ImgOverlayDiv.appendChild(carouselCaption);
-
-    wrapper.appendChild(ImgOverlayDiv);
-});
-
-
-// add project captions
-const carousels = document.querySelectorAll(".carousel-caption");
-carousels.forEach((carousel) => {
-    carousel.classList.add("project-captions");
-});
-
-const projectCaption = document.querySelectorAll(".project-captions");
-projectCaption.forEach((caption, index) => {
-    const title = document.createElement('h5');
-    title.textContent = projectTitles[index];
-
-    const description = document.createElement('p');
-    description.textContent = projectDescription[index];
-
-    const technologyDiv = document.createElement('div');
-    technologyDiv.className = `technology-lists-${index + 1}`;
-
-    caption.appendChild(title);
-    caption.appendChild(description);
-    caption.appendChild(technologyDiv);
-});
-
-// add technology sets
-technologySets.forEach((technologies, index) => {
-  const listContainer = document.querySelector(`.technology-lists-${index + 1}`);
-  
-  technologies.forEach(technology => {
-    const listDiv = document.createElement('div');
-    listDiv.className = "btn btn-light rounded-5 disabled";
-    listDiv.style.cssText = "font-size: 10px; margin: 3px; padding: 4px 8px 4px 8px;";
-    listDiv.textContent = technology;
-
-    listContainer.appendChild(listDiv);
-  });
-});
-
-
-// add modal for each project
-const modals = document.querySelectorAll("modal");
-
-modals.forEach((modal, index) => {
-    const modalDialogDiv = document.createElement("div");
-    modalDialogDiv.innerHTML = `
-    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-        <div class="modal-content rounded-5 project-modal" style="background-color: rgba(255, 255, 255, 0.75); backdrop-filter: blur(10px);">
+function createModalContent(project) {
+    return `
+        <div class="modal-header">
+            <h1 class="modal-title fs-5" id="staticBackdropLabel">${project.title}</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-    <div>
-    `
-    const modalContent = document.querySelector("modal-content");
-
-    // modal header
-    const modalHeaders = document.createElement("div");
-    modalHeaders.className = "modal-header";
-
-    const modalTitle = document.createElement("h1");
-    modalTitle.className = "modal-title fs-5";
-    modalTitle.id = "staticBackdropLabel";
-    modalTitle.textContent = projectTitles[index];
-
-    const cancelBtn = document.createElement("button");
-    cancelBtn.className = "btn-close";
-    cancelBtn.setAttribute("data-bs-dismiss", "modal");
-    cancelBtn.setAttribute("aria-label", "Close");
-
-    modalHeaders.appendChild(modalTitle);
-    modalHeaders.appendChild(cancelBtn);
-
-    // modal body
-    const modalBody = document.createElement("div");
-    modalBody.className = "modal-body";
-
-    const description = document.createElement("p");
-    description.textContent = projectDescription[index];
-
-    const youtubeVideo = document.createElement("iframe");
-    youtubeVideo.className = "youtube-video";
-    youtubeVideo.src = youtubeLinks[index];
-    // youtubeVideo.frameBorder = "0";
-    youtubeVideo.allow = "autoplay; encrypted-media";
-    youtubeVideo.allowFullscreen = true;
-
-    const aboutHeader = document.createElement("h6");
-    aboutHeader.textContent = "About";
-
-    const aboutProject = document.createElement("p");
-    aboutProject.textContent = projectAbout[index];
-
-    const techHeader = document.createElement("h6");
-    techHeader.textContent = "Technology";
-
-    const techLists = document.createElement("p");
-    techLists.textContent = projectAbout[index];
-
-    const projectLinks = document.createElement("div");
-    const githubLink = document.createElement("div");
-    const webLink = document.createElement("div");
-
-    const github = document.createElement("a");
-    const githubLogo = document.createElement("i");
-    githubLogo.className = "bi bi-github link-icon";
-    github.href = githubLinks[index];
-    github.target = "_blank";
-    github.appendChild(githubLogo);
-    githubLink.appendChild(github);
-
-    const website = document.createElement("a");
-    const websiteLogo = document.con
+        <div class="modal-body">
+            <p>${project.description}</p>
+            ${project.youtubeLink ? `<iframe class="youtube-video" src="${project.youtubeLink}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>`
+                 : `<img class="youtube-video" src="${project.imgSrc}"></img>`}
+            <h5>About</h6>
+            <p>${project.about}</p>
+            <h5>Technologies</h6>
+            <div class="tech-lists">
+            </div>
+            <div class="project-links">
+                ${project.githubLink ? 
+                `<div class="github-link">
+                    <a href="${project.githubLink}" target="_blank">
+                        <i class="bi bi-github link-icon"></i>
+                    </a>
+                </div>`
+                : ''}
+                ${project.webLink ? 
+                `<div class="web-link">
+                    <a href="${project.webLink}" target="_blank">
+                        <i class="bi bi-globe2 link-icon"></i>
+                    </a>
+                </div> `
+                : ''}
+            </div>
+        </div>    
+    `;
+}
 
 
-    modalContent.appendChild(modalHeaders);
-    modalContent.appendChild(modalBody);
-    modal.appendChild(modalDialogDiv);
+const modalContainer = document.querySelector("#projects-main .project-grid");
+
+const projectImgWrapper = document.querySelectorAll(".project-img-wrapper");
+projectImgWrapper.forEach((wrapper, index) => {
+    const overlayHTML = `
+    <div class="project-img-overlay">
+            <div class="carousel-caption d-none d-md-block" style="color: white;">
+                <h5>${projects[index].title}</h5>
+                <p>${projects[index].description}</p>
+                <div class="technology-lists"></div>
+            </div>
+        </div>
+    `;
+    wrapper.insertAdjacentHTML('afterbegin', overlayHTML);
 });
+
+const technologyListsDiv = document.querySelectorAll(".technology-lists");
+technologyListsDiv.forEach((listDiv, index) => {
+    const techLists = projects[index].technologies;
+    techLists.forEach((technology) => {
+        const techDiv = document.createElement("div");
+
+        techDiv.className = "btn btn-light rounded-5 disabled";
+        techDiv.style.cssText = "font-size: 10px; margin: 3px; padding: 4px 8px 4px 8px;";
+        techDiv.textContent = technology;
+
+        listDiv.appendChild(techDiv);
+    });
+});
+
+projects.forEach((project) => {
+    const modalHTML = `
+        <div class="modal fade project-modal" id="${project.id}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content rounded-5 project-modal" style="background-color: rgba(255, 255, 255, 0.75); backdrop-filter: blur(10px);">
+                    ${createModalContent(project)}
+                </div>
+            </div>
+        </div>     
+    `;
+
+    modalContainer.insertAdjacentHTML('beforeend', modalHTML);
+});
+
+const techListsDiv = document.querySelectorAll(".tech-lists");
+techListsDiv.forEach((listDiv, index) => {
+    const techLists = projects[index].technologies;
+    techLists.forEach((technology) => {
+        const techDiv = document.createElement("div");
+
+        techDiv.className = "btn btn-light rounded-5 disabled";
+        techDiv.style.cssText = "font-size: 10px; margin: 3px; padding: 4px 8px 4px 8px;";
+        techDiv.textContent = technology;
+
+        listDiv.appendChild(techDiv);
+    });
+});
+
