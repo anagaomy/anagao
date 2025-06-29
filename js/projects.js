@@ -2,8 +2,8 @@ const projects = [
     {
         id: "medimateModal",
         title: "🏥 Medimate+", 
-        description: "description of the project",
-        about: "about the project",
+        description: "A healthcare app for doctor appointment, health tracking, and AI-assisted clinic search.",
+        about: "Medimate+ is a fullstack healthcare web application integrating APIs that helps users manage medical appointments, track health data, and access location-based clinic recommendations using Google Maps and AI-powered assistance.",
         technologies: ["React", "HTML", "CSS", "Javascript", "Vercel", "Render", "PostgreSQL", "Node.js/Express", "OpenAI API", "Google Map API"],
         youtubeLink: "https://www.youtube.com/embed/HSwBGuq-D-E?autoplay=1&mute=1&controls=0&loop=1",
         githubLink: "https://github.com",
@@ -14,8 +14,8 @@ const projects = [
     {
         id: "sleeptrackerModal",
         title: "😴 Sleep Tracker",
-        description: "description of the project",
-        about: "about the project",
+        description: "A simple mobile app to log and track your sleep and daily energy levels for better sleep habits.",
+        about: "Sleep Tracker is cross-platform mobile app to log and review overnight sleep and daytime sleepiness data using Ionic and Node.js",
         technologies: ["Ionic", "HTML", "Scss", "Javascript", "Typescript", "Node.js"], 
         youtubeLink: "https://www.youtube.com/embed/rgn8NQtAel4?autoplay=1&mute=1&controls=0&loop=1",        
         githubLink: "https://github.com",
@@ -25,8 +25,8 @@ const projects = [
     {
         id: "spotifyModal",
         title: "🎵 Spotify Browser",
-        description: "description of the project",
-        about: "about the project",
+        description: "A web tool that lets you explore and search Spotify music directly from your browser.",
+        about: "Spotify Browser is a web app using Angular and Spotify API to browse, search, and display real-time Spotify music data.",
         technologies: ["Angular", "HTML", "CSS", "Typescript", "Javascript", "Spotify API", "Node.js/Express"],
         youtubeLink: "https://www.youtube.com/embed/DWUlPqBxBPc?autoplay=1&mute=1&controls=0&loop=1",        
         githubLink: "https://github.com",
@@ -36,8 +36,8 @@ const projects = [
     {
         id: "chatModal",
         title: "💬 Distributed Social Messenger",
-        description: "description of the project",
-        about: "about the project",
+        description: "A simple chat app that lets users send and receive messages without relying on a central server.",
+        about: "Distributed Social Messenger is a Python-based decentralized messenger using Tkinter and Web APIs for real-time message exchange.",
         technologies: ["Python","Tkinter", "JSON", "Web API"],
         youtubeLink: "",        
         githubLink: "",
@@ -47,8 +47,8 @@ const projects = [
     {
         id: "runkeeperModal",
         title: "🏃 Runkeeper Tweet Report",
-        description: "description of the project",
-        about: "about the project",
+        description: "A tool that analyzes and displays workout summaries from Runkeeper tweets.",
+        about: "Runkeeper Tweet Report is a web app that parses and summarizes Runkeeper workout data from JSON tweets using HTML, CSS, JavaScript, and TypeScript.",
         technologies: ["HTML", "CSS", "Javascript", "Typescript"],
         youtubeLink: "https://www.youtube.com/embed/c3pllqUbVHw?autoplay=1&mute=1&controls=0&loop=1",        
         githubLink: "https://github.com",
@@ -58,8 +58,8 @@ const projects = [
     {
         id: "canvasModal",
         title: "🎨 Canvas UI Redesign",
-        description: "description of the project",
-        about: "about the project",
+        description: "A modern, user-friendly redesign of the Canvas learning platform for smoother navigation and a better experience.",
+        about: "Redesigned Canvas UI with Figma, developing wireframes, interactive prototypes, and high-fidelity mockups to improve usability.",
         technologies: ["Figma", "Prototype", "Wireframe", "Hi-Fi Mockup"],
         youtubeLink: "https://www.youtube.com/embed/9Imvim1OI8U?autoplay=1&mute=1&controls=0&loop=1",        
         githubLink: "",
@@ -124,7 +124,7 @@ const projectImgWrapper = document.querySelectorAll(".project-img-wrapper");
 projectImgWrapper.forEach((wrapper, index) => {
     const overlayHTML = `
     <div class="project-img-overlay">
-            <div class="carousel-caption d-none d-md-block" style="color: white;">
+            <div class="carousel-caption d-none d-md-block" style="color: white; padding-bottom: 0;">
                 <h5>${projects[index].title}</h5>
                 <p>${projects[index].description}</p>
                 <div class="technology-lists"></div>
