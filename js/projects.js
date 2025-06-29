@@ -8,7 +8,8 @@ const projects = [
         youtubeLink: "https://www.youtube.com/embed/HSwBGuq-D-E?autoplay=1&mute=1&controls=0&loop=1",
         githubLink: "https://github.com",
         webLink: "https://medimate-chi.vercel.app/dashboard",
-        imgSrc: "images/projects/medimate/dashboard.png"
+        imgSrc: "images/projects/medimate/dashboard.png",
+        figmaLink: "https://embed.figma.com/design/jSpwSZG9TRbkAneMt3d1QP/Medimate--UI-design?node-id=0-1&embed-host=share"
     },
     {
         id: "sleeptrackerModal",
@@ -39,7 +40,7 @@ const projects = [
         about: "about the project",
         technologies: ["Python","Tkinter", "JSON", "Web API"],
         youtubeLink: "",        
-        githubLink: "https://github.com",
+        githubLink: "",
         webLink: "",
         imgSrc: "images/projects/DSPchat/DSP-chat.jpeg"
     },
@@ -61,9 +62,10 @@ const projects = [
         about: "about the project",
         technologies: ["Figma", "Prototype", "Wireframe", "Hi-Fi Mockup"],
         youtubeLink: "https://www.youtube.com/embed/9Imvim1OI8U?autoplay=1&mute=1&controls=0&loop=1",        
-        githubLink: "https://github.com",
+        githubLink: "",
         webLink: "",
-        imgSrc: "images/projects/canvas/dashboard.png"
+        imgSrc: "images/projects/canvas/dashboard.png",
+        figmaLink: "https://embed.figma.com/design/6wd6PO9RECCJsKZue1brqR/Canvas-UI-Redesign?node-id=0-1&embed-host=share"
     },
 ];
 
@@ -77,7 +79,7 @@ function createModalContent(project) {
         <div class="modal-body">
             <p>${project.description}</p>
             ${project.youtubeLink ? `<iframe class="youtube-video" src="${project.youtubeLink}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>`
-                 : `<img class="youtube-video" src="${project.imgSrc}"></img>`}
+                 : `<img class="grid-image" src="${project.imgSrc}" style="margin-bottom: 20px;"></img>`}
             <h5>About</h6>
             <p>${project.about}</p>
             <h5>Technologies</h6>
@@ -98,7 +100,18 @@ function createModalContent(project) {
                     </a>
                 </div> `
                 : ''}
+                ${project.figmaLink ? 
+                `<div class="figma-link">
+                    <a href="${project.figmaLink}" target="_blank">
+                        <img src="images/skills/figma-icon.png" width= 24px;></img>
+                    </a>
+                </div>` 
+                : ''
+                }
             </div>
+            ${project.figmaLink ? 
+                `<iframe class="figma-links"; style="solid rgba(0, 0, 0, 0.1);" src="${project.figmaLink}" frameborder="0" allowfullscreen></iframe>` 
+                : ''}
         </div>    
     `;
 }
