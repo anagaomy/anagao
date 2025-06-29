@@ -117,6 +117,7 @@ function createModalContent(project) {
 }
 
 
+function initProjectGrid() {
 const modalContainer = document.querySelector("#projects-main .project-grid");
 
 const projectImgWrapper = document.querySelectorAll(".project-img-wrapper");
@@ -134,44 +135,62 @@ projectImgWrapper.forEach((wrapper, index) => {
 });
 
 const technologyListsDiv = document.querySelectorAll(".technology-lists");
-technologyListsDiv.forEach((listDiv, index) => {
-    const techLists = projects[index].technologies;
-    techLists.forEach((technology) => {
-        const techDiv = document.createElement("div");
+    technologyListsDiv.forEach((listDiv, index) => {
+        const techLists = projects[index].technologies;
+        techLists.forEach((technology) => {
+            const techDiv = document.createElement("div");
 
-        techDiv.className = "btn btn-light rounded-5 disabled";
-        techDiv.style.cssText = "font-size: 10px; margin: 3px; padding: 4px 8px 4px 8px;";
-        techDiv.textContent = technology;
+            techDiv.className = "btn btn-light rounded-5 disabled";
+            techDiv.style.cssText = "font-size: 10px; margin: 3px; padding: 4px 8px 4px 8px;";
+            techDiv.textContent = technology;
 
-        listDiv.appendChild(techDiv);
+            listDiv.appendChild(techDiv);
+        });
     });
-});
 
-projects.forEach((project) => {
-    const modalHTML = `
-        <div class="modal fade project-modal" id="${project.id}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-                <div class="modal-content rounded-5 project-modal" style="background-color: rgba(255, 255, 255, 0.75); backdrop-filter: blur(10px);">
-                    ${createModalContent(project)}
+    projects.forEach((project) => {
+        const modalHTML = `
+            <div class="modal fade project-modal" id="${project.id}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content rounded-5 project-modal" style="background-color: rgba(255, 255, 255, 0.75); backdrop-filter: blur(10px);">
+                        ${createModalContent(project)}
+                    </div>
                 </div>
-            </div>
-        </div>     
-    `;
+            </div>     
+        `;
 
-    modalContainer.insertAdjacentHTML('beforeend', modalHTML);
-});
-
-const techListsDiv = document.querySelectorAll(".tech-lists");
-techListsDiv.forEach((listDiv, index) => {
-    const techLists = projects[index].technologies;
-    techLists.forEach((technology) => {
-        const techDiv = document.createElement("div");
-
-        techDiv.className = "btn btn-light rounded-5 disabled";
-        techDiv.style.cssText = "font-size: 10px; margin: 3px; padding: 4px 8px 4px 8px;";
-        techDiv.textContent = technology;
-
-        listDiv.appendChild(techDiv);
+        modalContainer.insertAdjacentHTML('beforeend', modalHTML);
     });
-});
 
+    const techListsDiv = document.querySelectorAll(".tech-lists");
+    techListsDiv.forEach((listDiv, index) => {
+        const techLists = projects[index].technologies;
+        techLists.forEach((technology) => {
+            const techDiv = document.createElement("div");
+
+            techDiv.className = "btn btn-light rounded-5 disabled";
+            techDiv.style.cssText = "font-size: 10px; margin: 3px; padding: 4px 8px 4px 8px;";
+            techDiv.textContent = technology;
+
+            listDiv.appendChild(techDiv);
+        });
+    });
+
+    const grid = document.querySelector('.project-grid');
+    imagesLoaded(grid, function() {
+        new Masonry(grid, {
+            itemSelector: '.project-img-wrapper',
+            columnWidth: '.project-img-wrapper',
+            gutter: 20,
+            percentPosition: true,
+            transitionDuration: '0.8s'
+        });
+    });
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Check if we're on the projects page
+    if (document.querySelector('#projects-main')) {
+        initProjectGrid();
+    }
+});
