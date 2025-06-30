@@ -2,7 +2,7 @@ body {
     margin: auto 100px;
     padding: 60px 120px;
     font-family: "Roboto", "Noto Sans", serif;
-    transition: background-color 0.5s ease;
+    transition: background-color 0.6s ease;
 }
 
 .body {
@@ -18,7 +18,7 @@ body {
 }
 .bg-about { background-color: #fff3f6; }
 .bg-work { background-color: #ffb4cb; }
-.bg-skills { background-color: #fff3f6; }
+.bg-skills { background-color: black; color: white; }
 .bg-projects { background-color: black; color: white; }
 .bg-involvement { background-color: #ffb4cb; }
 .bg-contacts { background-color: #ffb4cb; }

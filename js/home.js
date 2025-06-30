@@ -155,44 +155,44 @@ techListsDiv.forEach((techList, index) => {
 const yamiWorkDescription = [
   {
     icon: "bi bi-calendar-heart work-icon",
-    subtitle: "Brand promotion & event planning",
+    subtitle: "Brand Promotion",
     description: "Expanded Yami's presence at UC Irvine by organizing on-campus and online promotional events, including pop-ups and sampling experiences, attracting 100+ participants and increasing brand awareness."
   },
   {
     icon: "bi bi-tiktok work-icon",
-    subtitle: "Social media marketing",
+    subtitle: "Social Media Marketing",
     description: "Created content-driven campaigns on TikTok and RedNote, including unboxing videos, product reviews, and discount promotions, reaching 10,000+ views and growing followers by 45%."
   },
   {
     icon: "bi bi-people work-icon",
-    subtitle: "User engagement & growth strategy",
+    subtitle: "Growth Strategy",
     description: "Collected and analyzed user feedback to optimize marketing strategies, enhance engagement, and drive sales for beauty, snack, and lifestyle products."    
   }
 ];
 
 
-// const yamiContainer = document.querySelector(".yami-description-container");
+const yamiContainer = document.querySelector(".yami-description-container");
 
-// yamiWorkDescription.forEach((description) => {
-//   const descriptionHTML = `
-//     <div class="col">
-//       <div class="card h-100" style="background-color: rgba(255, 255, 255, 0.5); border-width: 0; border-radius: 20px" data-aos="fade-up" data-aos-duration="1000">
-//           <div class="card-body">
-//               <div class="row g-0" style="text-align: left;">
-//                   <div class="col-md-1 d-flex">
-//                       <i class="${description.icon}"></i>
-//                   </div>
-//                   <div class="col-md-11">
-//                       <div class="card-body work-msg">
-//                           <strong>${description.subtitle}</strong>
-//                       </div>
-//                   </div>
-//                   <p>${description.description}</p>
-//               </div>
-//           </div>
-//       </div>
-//     </div>
-//   `;
-//   yamiContainer.insertAdjacentHTML('beforeend', descriptionHTML);
-// });
+yamiWorkDescription.forEach((description, index) => {
+  const descriptionHTML = `
+    <div class="col">
+      <div class="card h-100" style="background-color: rgba(255, 255, 255, 0.5); border-width: 0; border-radius: 20px" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="${index * 200}">
+          <div class="card-body">
+              <div class="row g-0 align-items-center" style="text-align: left; padding: 10px;">
+                  <div class="col-md-1 d-flex justify-content-center">
+                      <i class="${description.icon}" style="font-size: 25px;"></i>
+                  </div>
+                  <div class="col-md-11">
+                      <div class="card-body justify-content-center">
+                          <h6 style="margin-bottom:0;">${description.subtitle}</h6>
+                      </div>
+                  </div>
+                  <p style="margin-top: 9px;">${description.description}</p>
+              </div>
+          </div>
+      </div>
+    </div>
+  `;
+  yamiContainer.insertAdjacentHTML('beforeend', descriptionHTML);
+});
 
