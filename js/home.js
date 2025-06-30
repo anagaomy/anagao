@@ -129,10 +129,23 @@ function createCarouselItem(project, index) {
               <div class="carousel-caption d-none d-md-block" style="color: white;">
                   <h5>${project.title}</h5>
                   <p>${project.description}</p>
-                  <a href="projects.html" class="btn btn-light rounded-5 mt-md-3 mb-3 custom-button" type="button" style="--bs-btn-padding-y: .8rem;">View project</a>
+                  <div class="techLists mb-3"></div>
               </div>
           </div>
       </div>
     </div>
   `;
 }
+
+const techListsDiv = document.querySelectorAll(".techLists");
+techListsDiv.forEach((techList, index) => {
+  const technologies = projects[index].technologies;
+  technologies.forEach((tech) => {
+    const techDiv = document.createElement("div");
+      techDiv.className = "btn btn-light rounded-5 disabled";
+      techDiv.style.cssText = "font-size: 12px; margin: 3px; padding: 4px 8px 4px 8px;";
+      techDiv.textContent = tech;
+
+      techList.append(techDiv);
+  })
+});
