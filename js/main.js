@@ -31,9 +31,97 @@ const observer = new IntersectionObserver(
       }
     });
   },
-  { threshold: 0.4 } // Trigger when 50% of section is visible
+  { threshold: 0.4 } // Trigger when 40% of section is visible
 );
 
 sections.forEach((section) => {
   observer.observe(section);
 });
+
+
+// Navbar items 
+const navItems = [
+  // home
+  {
+    text: "Home",
+    href: "index.html#home"
+  },
+  // about
+  {
+    text: "About",
+    href: "index.html#about"
+  },
+  // work 
+  {
+    text: "Work",
+    href: "work.html"
+  },
+  // project
+  {
+    text: "Academic Projects",
+    href: "projects.html"
+  },
+  // skills
+  {
+    text: "Skills",
+    href: "index.html#skills"
+  },
+  // involvement
+  {
+    text: "Involvement",
+    href: "involvement.html"
+  }
+];
+
+// Navbar container
+const navbarDiv = document.querySelectorAll("#mainNavbar .collapse")
+const navBar = document.createElement("ul");
+navBar.className = "navbar-nav me-auto nav-center my-2 my-lg-0 navbar-nav-scroll";
+navBar.style.cssText = "--bs-scroll-height: 100px; font-weight: 250; font-size: 14px;";
+navbarDiv.forEach(element => {
+  element.appendChild(navBar);
+});
+
+const navbarContainers = document.querySelectorAll("#mainNavbar .navbar-nav");
+
+navItems.forEach((item) => {
+  const navItemHTML = `
+    <li class="nav-item">
+      <a class="nav-link rounded-5" aria-current="page" href="${item.href}"
+      style="
+          background-color: rgba(255, 255, 255, 0.5);
+          backdrop-filter: blur(10px); 
+          padding-top: 10px;
+          padding-bottom: 10px;
+          padding-left: 20px; 
+          padding-right: 20px;" 
+      >${item.text}</a>
+    </li>
+  `;
+
+  navbarContainers.forEach((container) => {
+    container.insertAdjacentHTML('beforeend', navItemHTML);
+  });
+});
+
+// Select all sections and all navbar links
+const navLinks = document.querySelectorAll('.nav-link');
+
+// active navbar
+const currentPage = window.location.pathname.split('/').pop();
+const currentHash = window.location.hash;
+
+const navLink = document.querySelectorAll(".nav-link");
+navLink.forEach((link) => {
+  const linkHref = link.getAttribute('href');
+  if (currentHash === '' && currentPage === linkHref) {
+    link.classList.add('active');
+  }
+});
+
+const activeLink = document.querySelector('.nav-link.active');
+if (activeLink) {
+    activeLink.style.backgroundColor = 'rgba(255, 255, 255)';
+    activeLink.style.color = '#000000';
+}
+

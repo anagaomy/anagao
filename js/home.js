@@ -1,3 +1,31 @@
+// IntersectionObserver setup
+const observer1 = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      // Remove 'active' class from all links
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        // Optional: Reset to default styles
+        link.style.backgroundColor = 'rgba(255, 255, 255, 0.5)';
+        link.style.color = '';
+        link.style.fontWeight = '200';
+      });
+
+      // Add 'active' class to the current link
+      const activeLink = document.querySelector(`.nav-link[href$="#${entry.target.id}"]`);
+      if (activeLink) {
+        activeLink.classList.add('active');
+        activeLink.style.backgroundColor = 'rgb(255, 255, 255)';
+        activeLink.style.color = '#000000';
+      }
+    }
+  });
+}, { threshold: 0.4 }); // Trigger when 40% of section is visible
+
+// Start observing each section
+sections.forEach(section => observer1.observe(section));
+
+
 // work skill lists 
 const skillContainer = document.querySelector("#work .skill-lists");
 
@@ -96,7 +124,7 @@ function createCarouselItem(project, index) {
       <div class="carousel-img-wrapper">
           <img src="${project.src}" class="carousel-img d-block w-100" alt="${project.title}">
           <div class="carousel-overlay">
-              <a class="btn btn-light mt-md-4 carousel-label disabled" style="--bs-btn-padding-y: .5rem;">
+              <a class="btn btn-light mt-md-4 carousel-label disabled rounded-5" style="--bs-btn-padding-y: .5rem;">
                   ${project.type}
               </a>
               <div class="carousel-caption d-none d-md-block" style="color: white;">
@@ -241,3 +269,4 @@ involvementCardList.forEach((cardList, index) => {
     cardList.appendChild(card);
   });
 }); 
+

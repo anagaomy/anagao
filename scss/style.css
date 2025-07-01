@@ -35,14 +35,18 @@ body {
 
 /* Navbar when scrolling up */
 .nav-scrolled {
-  background-color: rgba(255, 255, 255, 0.75) !important;
-  backdrop-filter: blur(10px);
-  /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
+  /* background-color: rgba(255, 255, 255, 0.75) !important; */
+  /* backdrop-filter: blur(10px); */
+  background-color: transparent !important;
 }
 
-.nav-scrolled .nav-link,
+/* .nav-scrolled .nav-link,
 .nav-scrolled .navbar-brand {
-  color: black !important;
+  color: rgba(255, 255, 255, 0.7) !important;
+} */
+
+.nav-scrolled .navbar-brand {
+  color: rgba(255, 255, 255, 0.7) !important;
 }
 
 /* Hide navbar */
@@ -51,7 +55,7 @@ body {
 }
 
 .container-fluid {
-    margin-top: 10px;
+    margin-top: 30px;
     margin-bottom: 10px;
 }
 
@@ -66,8 +70,8 @@ body {
 }
 
 .nav-item {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 main {
@@ -344,7 +348,7 @@ main {
     opacity: 0;
     transition: opacity 0.3s ease;
     z-index: 1;
-    border-radius: 20px;
+    border-radius: 10px;
 }
 
 .carousel-img-wrapper {
