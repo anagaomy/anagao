@@ -270,6 +270,10 @@ main {
     font-size: 35px;
 }
 
+.yami-description-container .card:hover {
+    background-color: rgba(255, 255, 255, 0.85) !important;
+}
+
 .skills-part {
     display: flex;
     margin-left: 40px;
@@ -540,6 +544,18 @@ main {
 
 .project-img-wrapper:hover .project-img-overlay {
     opacity: 1;
+}
+
+#projects .custom-button {
+    border-width: 1px !important;
+    background-color: #ffb4cb;
+    border-color: #ffb4cb;
+}
+
+#projects .custom-button:hover {
+    border-color: #ffb4cb !important;
+    background-color: transparent !important;
+    color: #ffb4cb;
 }
 
 .involvement-header {

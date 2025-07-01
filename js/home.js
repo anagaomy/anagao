@@ -185,7 +185,7 @@ yamiWorkDescription.forEach((description, index) => {
                   </div>
                   <div class="col-md-11">
                       <div class="card-body justify-content-center">
-                          <h6 style="margin-bottom:0;">${description.subtitle}</h6>
+                          <h6 style="margin-bottom: 0; font-size: 20px">${description.subtitle}</h6>
                       </div>
                   </div>
                   <p style="margin-top: 9px;">${description.description}</p>
