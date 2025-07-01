@@ -41,11 +41,11 @@ sections.forEach((section) => {
 
 // Navbar items 
 const navItems = [
-  // home
-  {
-    text: "Home",
-    href: "index.html#home"
-  },
+  // // home
+  // {
+  //   text: "Home",
+  //   href: "index.html#home"
+  // },
   // about
   {
     text: "About",
@@ -77,7 +77,7 @@ const navItems = [
 const navbarDiv = document.querySelectorAll("#mainNavbar .collapse")
 const navBar = document.createElement("ul");
 navBar.className = "navbar-nav me-auto nav-center my-2 my-lg-0 navbar-nav-scroll";
-navBar.style.cssText = "--bs-scroll-height: 100px; font-weight: 250; font-size: 14px;";
+navBar.style.cssText = "--bs-scroll-height: 100px; font-weight: 300; font-size: 14px;";
 navbarDiv.forEach(element => {
   element.appendChild(navBar);
 });
@@ -93,8 +93,8 @@ navItems.forEach((item) => {
           backdrop-filter: blur(10px); 
           padding-top: 10px;
           padding-bottom: 10px;
-          padding-left: 20px; 
-          padding-right: 20px;" 
+          padding-left: 22px; 
+          padding-right: 22px;" 
       >${item.text}</a>
     </li>
   `;
@@ -105,13 +105,13 @@ navItems.forEach((item) => {
 });
 
 // Select all sections and all navbar links
-const navLinks = document.querySelectorAll('.nav-link');
+const navLinks = document.querySelectorAll('.collapse .nav-link');
 
 // active navbar
 const currentPage = window.location.pathname.split('/').pop();
 const currentHash = window.location.hash;
 
-const navLink = document.querySelectorAll(".nav-link");
+const navLink = document.querySelectorAll(".collapse .nav-link");
 navLink.forEach((link) => {
   const linkHref = link.getAttribute('href');
   if (currentHash === '' && currentPage === linkHref) {
@@ -119,7 +119,7 @@ navLink.forEach((link) => {
   }
 });
 
-const activeLink = document.querySelector('.nav-link.active');
+const activeLink = document.querySelector('.collapse .nav-link.active');
 if (activeLink) {
     activeLink.style.backgroundColor = 'rgba(255, 255, 255)';
     activeLink.style.color = '#000000';

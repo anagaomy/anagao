@@ -16,7 +16,7 @@ body {
     transition: background 1s ease; 
     background-color: rgba(255, 255, 255, 0.75);
 }
-.bg-about { background-color: #fff3f6; }
+.bg-about { background-color: rgba(255, 180, 203, 0.25);}
 .bg-work { background-color: #ffb4cb; }
 .bg-skills { background-color: black; color: #ffb4cb; }
 .bg-projects { background-color: black; color: #ffb4cb; }
@@ -25,7 +25,7 @@ body {
 /* .bg-project-home { background-color: #EA9ECE; } */
 .bg-project-home { background-color: #ffb4cb; }
 .bg-involvement-home { background-color: #ffb4cb; }
-.bg-projects-main { background-color: black; color: #ffb4cb;}
+.bg-projects-main { background-color: #0e0e0e; color: #ffb4cb;}
 
 #mainNavbar {
   background-color: transparent;
@@ -66,12 +66,37 @@ body {
 }
 
 .navbar-brand {
+    color: rgba(0, 0, 0, 0.75);
+    font-size: 40px !important;
     padding-left: 30px;
 }
 
 .nav-item {
     padding-left: 5px;
     padding-right: 5px;
+}
+
+.navbar-brand:hover {
+    color: rgb(207, 164, 248) !important;
+}
+
+.contact-btn {
+    background-color: rgba(0, 0, 0, 0.75) !important;
+    backdrop-filter: blur(10px) !important;
+    margin-right: 30px !important;
+    color: rgb(255, 255, 255) !important;
+    padding: 10px 20px 10px 20px !important;
+    font-weight: 200 !important;
+    font-size: 14px !important;
+}
+
+.contact-btn:hover {
+    background-color: #fbcddb !important;
+    color: black !important;
+}
+
+.collapse .nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.75) !important;
 }
 
 main {

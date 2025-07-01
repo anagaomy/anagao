@@ -12,7 +12,7 @@ const observer1 = new IntersectionObserver((entries) => {
       });
 
       // Add 'active' class to the current link
-      const activeLink = document.querySelector(`.nav-link[href$="#${entry.target.id}"]`);
+      const activeLink = document.querySelector(`.collapse .nav-link[href$="#${entry.target.id}"]`);
       if (activeLink) {
         activeLink.classList.add('active');
         activeLink.style.backgroundColor = 'rgb(255, 255, 255)';
