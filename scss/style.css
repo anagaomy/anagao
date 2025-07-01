@@ -18,14 +18,14 @@ body {
 }
 .bg-about { background-color: #fff3f6; }
 .bg-work { background-color: #ffb4cb; }
-.bg-skills { background-color: black; color: white; }
-.bg-projects { background-color: black; color: white; }
+.bg-skills { background-color: black; color: #ffb4cb; }
+.bg-projects { background-color: black; color: #ffb4cb; }
 .bg-involvement { background-color: #ffb4cb; }
 .bg-contacts { background-color: #ffb4cb; }
 /* .bg-project-home { background-color: #EA9ECE; } */
 .bg-project-home { background-color: #ffb4cb; }
 .bg-involvement-home { background-color: #ffb4cb; }
-.bg-projects-main { background-color: black; color: white;}
+.bg-projects-main { background-color: black; color: #ffb4cb;}
 
 #mainNavbar {
   background-color: transparent;
@@ -344,7 +344,7 @@ main {
     opacity: 0;
     transition: opacity 0.3s ease;
     z-index: 1;
-    border-radius: 10px;
+    border-radius: 20px;
 }
 
 .carousel-img-wrapper {

@@ -21,33 +21,6 @@ skills.forEach((skill) => {
   skillContainer.appendChild(skillDiv);
 });
 
-
-// involvement skill lists
-const skillSets = [
-  // CU
-  ["Content creation", "Design", "Branding", "Team collaboration", "Social media marketing"],
-  // CUCS
-  ["Peer support", "Collaboration", "Technical skills", "Networking", "Community engagement"], 
-  // film academy
-  ["Filming", "Directing", "script writing", "Video editing", "Storyboarding"],
-  // cyberforward
-  ["Third-party risk", "Vulnerability analysis", "Security policy"]
-];
-
-skillSets.forEach((skills, index) => {
-  const cardListContainer = document.querySelector(`.card-list-${index + 1}`);
-
-  skills.forEach(skill => {
-    const card = document.createElement('a');
-    card.className = "btn btn-light rounded-5 mt-md-2 disabled";
-    card.style = "font-size: 14px; border-width: 0; margin: 0 2px 1px 2px";
-    card.textContent = skill;
-
-    cardListContainer.appendChild(card);
-  });
-});
-
-
 // projects
 const projects = [
     {
@@ -123,7 +96,7 @@ function createCarouselItem(project, index) {
       <div class="carousel-img-wrapper">
           <img src="${project.src}" class="carousel-img d-block w-100" alt="${project.title}">
           <div class="carousel-overlay">
-              <a class="btn btn-light rounded-5 mt-md-4 carousel-label disabled" style="--bs-btn-padding-y: .5rem;">
+              <a class="btn btn-light mt-md-4 carousel-label disabled" style="--bs-btn-padding-y: .5rem;">
                   ${project.type}
               </a>
               <div class="carousel-caption d-none d-md-block" style="color: white;">
@@ -196,3 +169,75 @@ yamiWorkDescription.forEach((description, index) => {
   yamiContainer.insertAdjacentHTML('beforeend', descriptionHTML);
 });
 
+
+// involvements container 
+const involvemnets = [
+  // CU
+  {
+    title: "Marketing Officer",
+    name: "UCI Chinese Union",
+    date: "June 2023 - present",
+    img: "images/involvement/cu.png",
+    skillSets: ["Content creation", "Design", "Branding", "Team collaboration", "Social media marketing"]
+  },
+  // CUCS
+  {
+    title: "Event Coordinator",
+    name: "UCI CUCS",
+    date: "Sept 2024 - present",
+    img: "images/involvement/cucs.jpeg",
+    skillSets: ["Peer support", "Collaboration", "Technical skills", "Networking", "Community engagement"]
+  },
+  {
+    title: "Student Video Producer",
+    name: "AUHSD Film Academy",
+    date: "Aug 2022 - May 2023",
+    img: "images/involvement/film-academy.jpg",
+    skillSets: ["Filming", "Directing", "script writing", "Video editing", "Storyboarding"]
+  },
+  {
+    title: "Cyber Security Trainee",
+    name: "CyberForward",
+    date: "May 2022 - Jul 2022",
+    img: "images/involvement/CyberForward.png",
+    skillSets: ["Third-party risk", "Vulnerability analysis", "Security policy"]
+  },  
+];
+
+
+const involvementContainer = document.querySelector("#involvement .row")
+involvemnets.forEach((involvement, index) => {
+  const involvementHTML = `
+    <div class="col" onclick="window.location.href='involvement.html'">
+      <div class="card h-100" style="background-color: rgba(255, 255, 255, 0.5); border-width: 0; border-radius: 20px" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="${index * 200}">
+          <img src="${involvement.img}" class="card-img-top involvement-img" alt="An image of ${involvement.name} logo" style="border-top-left-radius: 20px; border-top-right-radius: 20px;">
+          <div class="card-body">
+              <h5 class="card-title">${involvement.title}</h5>
+              <p class="card-text">${involvement.name}</p>
+              <p class="card-text work-date">${involvement.date}</p>
+              <div class="card-list"></div>
+              <div class="arrow-button-container">
+                  <i class="bi bi-arrow-right-circle arrow-button-outline"></i>
+                  <i class="bi bi-arrow-right-circle-fill arrow-button"></i>
+              </div>
+          </div>
+      </div>
+    </div>
+  `;
+
+  involvementContainer.insertAdjacentHTML('beforeend', involvementHTML);
+});
+
+
+const involvementCardList = document.querySelectorAll("#involvement .card-list");
+involvementCardList.forEach((cardList, index) => {
+  const skillSets = involvemnets[index].skillSets;
+  skillSets.forEach((skill) => {
+    const card = document.createElement('a');
+    card.className = "btn btn-light rounded-5 mt-md-2 disabled";
+    card.style = "font-size: 13px; border-width: 0; margin: 0 2px 1px 2px";
+    card.textContent = skill;
+
+    cardList.appendChild(card);
+  });
+}); 
