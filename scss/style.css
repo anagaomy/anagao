@@ -82,7 +82,7 @@ body {
 }
 
 .navbar-brand:hover {
-    color: rgb(207, 164, 248) !important;
+    color: #fe9ab8 !important;
 }
 
 .contact-btn {
@@ -302,8 +302,8 @@ main {
 
 .skills-part {
     display: flex;
-    margin-left: 40px;
-    justify-content: left;
+    /* margin-left: 40px; */
+    justify-content: center;
     flex-wrap: wrap;
     gap: 50px;
 }
@@ -315,10 +315,10 @@ main {
 }
 
 .skill-category {
-    font-size: 20px;
-    text-align: left;
+    font-size: 26px;
+    text-align: center;
     margin-bottom: 70px;
-    margin-top: 40px;
+    margin-top: 100px;
 }
 
 .skill {

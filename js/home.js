@@ -200,6 +200,100 @@ techListsDiv.forEach((techList, index) => {
 });
 
 
+// skills data
+const skillsData = [
+  {
+    category: "Programming Languages",
+    skills: [
+      {src: "images/skills/C_Logo.png", name: "C"}, 
+      {src: "images/skills/CPlusPlus.svg", name: "C++"}, 
+      {src: "images/skills/Java.svg", name: "Java"}, 
+      {src: "images/skills/Python.svg", name: "Python"},  
+      {src: "images/skills/html5.svg", name: "HTML"}, 
+      {src: "images/skills/css3.svg", name: "CSS"}, 
+      {src: "images/skills/JS.svg", name: "JavaScript"}, 
+      {src: "images/skills/typescript.png", name: "TypeScript"}, 
+      {src: "images/skills/sql.png", name: "SQL"}, 
+      {src: "images/skills/R.svg", name: "R"}
+    ]
+  },
+  {
+    category: "Development Frameworks",
+    skills: [
+      {src: "images/skills/react.png", name: "React"},
+      {src: "images/skills/angular.webp", name: "Angular"},
+      {src: "images/skills/ionic.png", name: "Ionic"},
+      {src: "images/skills/bootstrap.png", name: "Bootstrap"},
+      {src: "images/skills/express.png", name: "Express.js"},
+      {src: "images/skills/nextjs.webp", name: "Next.js"}
+    ]
+  },
+  {
+    category: "Software Tools", 
+    skills: [
+      { src: "images/skills/Figma-logo.svg", name: "Figma"},
+      { src: "images/skills/canva.png", name: "Canva"},
+      { src: "images/skills/word.svg", name: "Word"},
+      { src: "images/skills/powerpoint.svg", name: "PowerPoint"},
+      { src: "images/skills/excel.png", name: "Excel"},
+      { src: "images/skills/premiere_pro.png", name: "Premiere Pro"},
+      { src: "images/skills/photoshop.png", name: "Photoshop"},
+      { src: "images/skills/illustrator.png", name: "Illustrator"},
+      { src: "images/skills/capcut.png", name: "CapCut"},
+      { src: "images/skills/git.png", name: "Git"},
+      { src: "images/skills/nodejs.webp", name: "Node.js"},
+      { src: "images/skills/mongodb.svg", name: "MongoDB"},
+      { src: "images/skills/Postgresql.png", name: "PostgreSQL"},
+      { src: "images/skills/vercel.png", name: "Vercel"},
+      { src: "images/skills/render.jpg", name: "Render"}
+    ]
+  },
+  {
+    category: "Languages",
+    skills: [
+      { src: "images/skills/USA.png", name: "English"},
+      { src: "images/skills/China.png", name: "Chinese"}
+    ]
+  },
+];
+
+// skills section container
+const skillsContainer = document.querySelector(".skills-container");
+
+skillsData.forEach((skillSet) => {
+  const skillsDiv = document.createElement("div");
+  skillsDiv.setAttribute("data-aos", "fade-up");
+  skillsDiv.setAttribute("data-aos-duration", "1000");
+
+  const skillTitle = document.createElement("h4");
+  skillTitle.className = "skill-category";
+  skillTitle.textContent = skillSet.category;
+
+  const skillPartDiv = document.createElement("div");
+  skillPartDiv.className = "skills-part";
+
+  skillSet.skills.forEach((skill) => {
+    const skillDiv = document.createElement("div");
+    skillDiv.className = "skill";
+
+    const source = document.createElement("img");
+    const name = document.createElement("p");
+    source.src = skill.src;
+    source.alt = skill.name;
+    name.textContent = skill.name;
+    skillDiv.appendChild(source);
+    skillDiv.appendChild(name);
+
+    skillPartDiv.appendChild(skillDiv);
+  });
+  
+  skillsDiv.appendChild(skillTitle);
+  skillsDiv.appendChild(skillPartDiv);
+  skillsContainer.appendChild(skillsDiv);
+});
+
+
+
 // involvements container 
 const involvemnets = [
   // CU
