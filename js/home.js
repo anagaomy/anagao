@@ -25,29 +25,77 @@ const observer1 = new IntersectionObserver((entries) => {
 // Start observing each section
 sections.forEach(section => observer1.observe(section));
 
-
 // work skill lists 
 const skillContainer = document.querySelector("#work .skill-lists");
 
 const skills = [
-  'Marketing', 
+  'Digital Marketing', 
+  'Content Creation', 
+  'Social Media', 
   'Growth Strategy', 
   'Data Analysis',
-  'Social Media', 
-  'Content Creation', 
   'Leadership',
   'Event Management', 
-  'Customer Acquisition'
+  'Customer Acquisition',
+  'Beauty, Fashion & Trends'
 ];
 
 skills.forEach((skill) => {
   const skillDiv = document.createElement('div');
   skillDiv.className = 'btn btn-light rounded-5 mt-md-2 disabled';
-  skillDiv.style.cssText = 'font-size: 16px; border-width: 0; margin-right: 5px; background-color: rgba(255, 255, 255, 0.5);';
+  skillDiv.style.cssText = 'font-size: 15px; border-width: 0; margin-right: 5px; background-color: rgba(255, 255, 255, 0.5);';
   skillDiv.textContent = skill;
 
   skillContainer.appendChild(skillDiv);
 });
+
+
+// Yami work descriptions
+const yamiWorkDescription = [
+  {
+    icon: "bi bi-calendar-heart work-icon",
+    subtitle: "Brand Promotion",
+    description: "Expanded Yami's presence in the local shopping center and Asian community by organizing both offline and online promotional events, including pop-ups and product sampling experiences, attracting over 100 customers and significantly increasing brand awareness."
+  },
+  {
+    icon: "bi bi-tiktok work-icon",
+    subtitle: "Social Media Marketing",
+    description: "Created content-driven campaigns on TikTok, Instagram and RedNote, including unboxing videos, product reviews, and discount promotions, reaching 10,000+ views and growing followers by over 50%."
+  },
+  {
+    icon: "bi bi-people work-icon",
+    subtitle: "Growth Strategy",
+    description: "Collected and analyzed user feedback and social media data from TikTok, Instagram, and RedNote to optimize marketing strategies, boost engagement, and drive sales for beauty, snack, and lifestyle products."    
+  }
+];
+
+
+const yamiContainer = document.querySelector(".yami-description-container");
+
+yamiWorkDescription.forEach((description, index) => {
+  const descriptionHTML = `
+    <div class="col">
+      <div class="card h-100" style="background-color: rgba(255, 255, 255, 0.5); border-width: 0; border-radius: 20px" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="${index * 200}">
+          <div class="card-body">
+              <div class="row g-0 align-items-center" style="text-align: left; padding: 10px;">
+                  <div class="col-md-1 d-flex justify-content-center">
+                      <i class="${description.icon}" style="font-size: 25px;"></i>
+                  </div>
+                  <div class="col-md-11">
+                      <div class="card-body justify-content-center">
+                          <h6 style="margin-bottom: 0; font-size: 20px">${description.subtitle}</h6>
+                      </div>
+                  </div>
+                  <p style="margin-top: 9px;">${description.description}</p>
+              </div>
+          </div>
+      </div>
+    </div>
+  `;
+  yamiContainer.insertAdjacentHTML('beforeend', descriptionHTML);
+});
+
+
 
 // projects
 const projects = [
@@ -149,52 +197,6 @@ techListsDiv.forEach((techList, index) => {
 
       techList.append(techDiv);
   })
-});
-
-
-// Yami work descriptions
-const yamiWorkDescription = [
-  {
-    icon: "bi bi-calendar-heart work-icon",
-    subtitle: "Brand Promotion",
-    description: "Expanded Yami's presence at UC Irvine by organizing on-campus and online promotional events, including pop-ups and sampling experiences, attracting 100+ participants and increasing brand awareness."
-  },
-  {
-    icon: "bi bi-tiktok work-icon",
-    subtitle: "Social Media Marketing",
-    description: "Created content-driven campaigns on TikTok and RedNote, including unboxing videos, product reviews, and discount promotions, reaching 10,000+ views and growing followers by 45%."
-  },
-  {
-    icon: "bi bi-people work-icon",
-    subtitle: "Growth Strategy",
-    description: "Collected and analyzed user feedback to optimize marketing strategies, enhance engagement, and drive sales for beauty, snack, and lifestyle products."    
-  }
-];
-
-
-const yamiContainer = document.querySelector(".yami-description-container");
-
-yamiWorkDescription.forEach((description, index) => {
-  const descriptionHTML = `
-    <div class="col">
-      <div class="card h-100" style="background-color: rgba(255, 255, 255, 0.5); border-width: 0; border-radius: 20px" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="${index * 200}">
-          <div class="card-body">
-              <div class="row g-0 align-items-center" style="text-align: left; padding: 10px;">
-                  <div class="col-md-1 d-flex justify-content-center">
-                      <i class="${description.icon}" style="font-size: 25px;"></i>
-                  </div>
-                  <div class="col-md-11">
-                      <div class="card-body justify-content-center">
-                          <h6 style="margin-bottom: 0; font-size: 20px">${description.subtitle}</h6>
-                      </div>
-                  </div>
-                  <p style="margin-top: 9px;">${description.description}</p>
-              </div>
-          </div>
-      </div>
-    </div>
-  `;
-  yamiContainer.insertAdjacentHTML('beforeend', descriptionHTML);
 });
 
 

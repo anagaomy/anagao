@@ -16,12 +16,13 @@ body {
     transition: background 1s ease; 
     background-color: rgba(255, 255, 255, 0.75);
 }
-.bg-about { background-color: rgba(255, 180, 203, 0.25);}
+/* .bg-about { background-color: rgba(255, 180, 203, 0.25);} */
+.bg-about { background-color: #ffb4cb;}
 .bg-work { background-color: #ffb4cb; }
 .bg-skills { background-color: black; color: #ffb4cb; }
 .bg-projects { background-color: black; color: #ffb4cb; }
 .bg-involvement { background-color: #ffb4cb; }
-.bg-contacts { background-color: #ffb4cb; }
+.bg-contacts { background-color: black; color: #ffb4cb;}
 /* .bg-project-home { background-color: #EA9ECE; } */
 .bg-project-home { background-color: #ffb4cb; }
 .bg-involvement-home { background-color: #ffb4cb; }
@@ -55,8 +56,8 @@ body {
 }
 
 .container-fluid {
-    margin-top: 30px;
-    margin-bottom: 10px;
+    margin-top: 10px;
+    /* margin-bottom: 10px; */
 }
 
 .nav-center {
@@ -66,7 +67,7 @@ body {
 }
 
 .navbar-brand {
-    color: rgba(0, 0, 0, 0.75);
+    color: rgba(0, 0, 0, 0.75) !important;
     font-size: 40px !important;
     padding-left: 30px;
 }
@@ -146,7 +147,7 @@ main {
 }
 
 #about {
-    padding-top: 200px;
+    padding-top: 0px;
 }
 
 #about p {
@@ -156,9 +157,10 @@ main {
 
 .about-title {
     /* color: white; */
-    font-size: 40px;
-    margin-top: 10px;
-    margin-bottom: 30px;
+    font-size: 180px;
+    margin-top: 300px;
+    /* margin-bottom: 30px; */
+    text-align: end;
 }
 
 .about-container {
@@ -174,6 +176,17 @@ main {
     line-height: 1.5;
     flex: 1; 
     padding-left: 20px;   
+}
+
+.aboutme-text {
+    margin-bottom: 30px;
+}
+
+.about-text-container {
+    text-align: center; 
+    margin: 100px 250px 200px 250px; 
+    font-size: 19px; 
+    font-weight: 200;
 }
 
 .Ana-pic {
@@ -347,7 +360,7 @@ main {
 
 .contact-icon {
     font-size: 50px;
-    color: black;
+    color: #ffb4cb;
 }
 
 .carousel-img {
