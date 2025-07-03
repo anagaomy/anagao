@@ -87,7 +87,7 @@ const navbarContainers = document.querySelectorAll("#mainNavbar .navbar-nav");
 navItems.forEach((item) => {
   const navItemHTML = `
     <li class="nav-item">
-      <a class="nav-link rounded-5" aria-current="page" href="${item.href}"
+      <a class="nav-link other-page rounded-5" aria-current="page" href="${item.href}"
       style="
           background-color: rgba(255, 255, 255, 0.5);
           backdrop-filter: blur(10px); 
@@ -115,6 +115,7 @@ const navLink = document.querySelectorAll(".collapse .nav-link");
 navLink.forEach((link) => {
   const linkHref = link.getAttribute('href');
   if (currentHash === '' && currentPage === linkHref) {
+    link.classList.remove('other-page');
     link.classList.add('active');
   }
 });

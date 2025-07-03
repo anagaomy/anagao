@@ -7,13 +7,13 @@ const observer1 = new IntersectionObserver((entries) => {
         link.classList.remove('active');
         // Optional: Reset to default styles
         link.style.backgroundColor = 'rgba(255, 255, 255, 0.5)';
-        link.style.color = '';
         link.style.fontWeight = '200';
       });
 
       // Add 'active' class to the current link
       const activeLink = document.querySelector(`.collapse .nav-link[href$="#${entry.target.id}"]`);
       if (activeLink) {
+        activeLink.classList.remove('other-page');
         activeLink.classList.add('active');
         activeLink.style.backgroundColor = 'rgb(255, 255, 255)';
         activeLink.style.color = '#000000';
@@ -42,7 +42,7 @@ const skills = [
 
 skills.forEach((skill) => {
   const skillDiv = document.createElement('div');
-  skillDiv.className = 'btn btn-light rounded-5 mt-md-2 disabled';
+  skillDiv.className = 'btn btn-light rounded-5 mt-md-2';
   skillDiv.style.cssText = 'font-size: 15px; border-width: 0; margin-right: 5px; background-color: rgba(255, 180, 203);';
   skillDiv.textContent = skill;
 
@@ -75,7 +75,7 @@ const yamiContainer = document.querySelector(".yami-description-container");
 yamiWorkDescription.forEach((description, index) => {
   const descriptionHTML = `
     <div class="col">
-      <div class="card h-100" style="background-color: rgba(255, 255, 255, 0.85); border-width: 0; border-radius: 20px" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="${index * 200}">
+      <div class="card h-100" style="background-color: rgba(255, 255, 255, 0.9); border-width: 0; border-radius: 20px" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="${index * 200}">
           <div class="card-body">
               <div class="row g-0 align-items-center" style="text-align: left; padding: 10px;">
                   <div class="col-md-1 d-flex justify-content-center">
@@ -323,7 +323,7 @@ const involvemnets = [
     title: "Cyber Security Trainee",
     name: "CyberForward",
     date: "May 2022 - Jul 2022",
-    img: "images/involvement/CyberForward.png",
+    img: "images/involvement/cyberforward_logo.jpeg",
     skillSets: ["Third-party risk", "Vulnerability analysis", "Security policy"]
   },  
 ];

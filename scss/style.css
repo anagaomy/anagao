@@ -29,6 +29,7 @@ body {
 .bg-project-home { background-color: #ffb4cb; }
 .bg-projects-main { background-color: #0e0e0e; color: #ffb4cb;}
 .bg-involvement-home { background-color: #ffb4cb; }
+.bg-involvement-list { background-color: black; color: #ffb4cb;}
 .bg-work-home { background-color: #ffb4cb; }
 
 
@@ -51,7 +52,12 @@ body {
 } */
 
 .nav-scrolled .navbar-brand {
-  color: rgba(255, 255, 255, 0.7) !important;
+  color: rgba(255, 255, 255) !important;
+}
+
+.nav-scrolled .contact-btn {
+    background-color: white !important;
+    color: black !important;
 }
 
 /* Hide navbar */
@@ -96,12 +102,16 @@ body {
 }
 
 .contact-btn:hover {
-    background-color: #fbcddb !important;
+    background-color: #fe9ab8 !important;
     color: black !important;
 }
 
-.collapse .nav-link:hover {
+.collapse .other-page:hover {
   background-color: rgba(255, 255, 255, 0.75) !important;
+}
+
+.active:hover {
+    background-color: #fe9ab8 !important;
 }
 
 main {
@@ -183,13 +193,13 @@ main {
 }
 
 .aboutme-text {
-    margin-bottom: 30px;
+    margin-bottom: 50px;
 }
 
 .about-text-container {
     text-align: center; 
-    margin: 100px 250px 200px 250px; 
-    font-size: 19px; 
+    margin: 100px 240px 200px 240px; 
+    font-size: 20px; 
     font-weight: 200;
 }
 
@@ -296,8 +306,12 @@ main {
     color: black;
 }
 
+.yami-description-container {
+    margin-top: 40px !important;
+}
+
 .yami-description-container .card:hover {
-    background-color: rgba(255, 255, 255, 0.75) !important;
+    background-color: #ffb4cb !important;
 }
 
 .skills-part {
