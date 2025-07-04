@@ -89,7 +89,7 @@ navItems.forEach((item) => {
     <li class="nav-item">
       <a class="nav-link other-page rounded-5" aria-current="page" href="${item.href}"
       style="
-          background-color: rgba(255, 255, 255, 0.5);
+          background-color:rgba(240, 240, 240, 0.5);
           backdrop-filter: blur(10px); 
           padding-top: 10px;
           padding-bottom: 10px;

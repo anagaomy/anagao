@@ -1,6 +1,6 @@
 body {
-    margin: auto 100px;
-    padding: 60px 120px;
+    /* margin: auto 100px; */
+    /* padding: 60px 0 60px 0; */
     font-family: "Roboto", "Noto Sans", serif;
     transition: background-color 0.6s ease;
 }
@@ -9,16 +9,45 @@ body {
     background-color: #fff3f6;
 }
 
-.bg-home { 
-    /* background: radial-gradient(circle at top left, rgba(255, 182, 193, 0.75) 100px, transparent 600px),
-            radial-gradient(circle at 50% 10%, rgba(255, 182, 193, 0.75) 100px, transparent 500px), white; */
+.home-main-container, .projects-main-container {
+    padding: 0 120px;
+}
+
+.involvement-main-container {
+    padding: 0 5px;
+}
+
+/* main {
+    max-width: 2560px;
+} */
+
+@keyframes pulseGradient {
+    0% {
+        background: radial-gradient(circle at 50% 7%, rgba(253, 123, 162, 0.75) 100px, transparent 600px), white;
+    }
+    50% {
+        background: radial-gradient(circle at 50% 7%, rgba(255, 180, 203, 0.9) 100px, transparent 600px), white;
+    }
+    100% {
+        background: radial-gradient(circle at 50% 7%, rgba(255, 180, 203, 0.75) 100px, transparent 600px), white;
+    }
+}
+
+
+/* .bg-home { 
     background: radial-gradient(circle at 50% 7%, rgba(255, 180, 203, 0.85) 100px, transparent 600px), white;
     transition: background 1s ease; 
     background-color: rgba(255, 255, 255, 0.75);
-}
+} */
 /* .bg-about { background-color: rgba(255, 180, 203, 0.25);} */
 /* .bg-about { background-color: #ffb4cb;} */
 /* .bg-work { background-color: #ffb4cb; } */
+
+.bg-home {
+    /* background: radial-gradient(circle at 50% 7%, rgba(255, 180, 203, 0.8) 100px, transparent 600px), white; */
+    animation: pulseGradient 2s ease-in-out infinite;
+    background-size: cover;
+}
 .bg-about { background-color: black; color: #ffb4cb; }
 .bg-work { background-color: black; color: #ffb4cb; }
 .bg-skills { background-color: black; color: #ffb4cb; }
@@ -29,7 +58,7 @@ body {
 .bg-project-home { background-color: #ffb4cb; }
 .bg-projects-main { background-color: #0e0e0e; color: #ffb4cb;}
 .bg-involvement-home { background-color: #ffb4cb; }
-.bg-involvement-list { background-color: black; color: #ffb4cb;}
+.bg-involvement-list { background-color: #ffb4cb;}
 .bg-work-home { background-color: #ffb4cb; }
 
 
@@ -52,11 +81,12 @@ body {
 } */
 
 .nav-scrolled .navbar-brand {
-  color: rgba(255, 255, 255) !important;
+  color: rgb(240, 240, 240, 0.8) !important;
 }
 
 .nav-scrolled .contact-btn {
-    background-color: white !important;
+    background-color: rgba(240, 240, 240, 0.8) !important;
+    backdrop-filter: blur(10px) !important;
     color: black !important;
 }
 
@@ -112,10 +142,6 @@ body {
 
 .active:hover {
     background-color: #fe9ab8 !important;
-}
-
-main {
-    max-width: 2560px;
 }
 
 #home {
@@ -390,6 +416,10 @@ main {
     color: #ffb4cb;
 }
 
+.carousel-item {
+    border-radius: 20px;
+}
+
 .carousel-img {
     display: block;
     height: 550px;
@@ -485,8 +515,8 @@ main {
     font-size: 14px;
 }
 
-#project-home, #involvement-home, #work-home {
-    height: 80vh;
+#home, #project-home, #involvement-home, #work-home {
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -602,7 +632,6 @@ main {
     display: flex;
     align-items: center; 
     gap: 10px;
-    margin-bottom: 20px;        
 }
 
 .youtube-video {
@@ -656,4 +685,102 @@ main {
 .figma-link:hover {
     transform: scale(1.1);
     transition-duration: 0.2s;
+}
+
+.involvement-grid {
+    justify-content: end;
+    align-items: end;
+}
+
+.involvement-grid-img {
+    height: 723px;
+    width: 723px;
+    object-fit: contain;
+    background-color: white;
+}
+
+.involvement-img-container {
+    text-align: center;
+}
+
+.accordion-item .btn:not(.collapsed) {
+    pointer-events: none;
+}
+.accordion-item .btn.collapsed {
+    pointer-events: auto;
+}
+
+#involvement-list {
+    margin: 0 30px;
+}
+
+.accordion-item {
+    border-width: 1px !important;
+    border-color: black !important;
+    background-color: white !important;
+    /* margin-top: 5px; */
+}
+
+.accordion-header .btn {
+    display: flex;
+    position: relative;
+    background-color: transparent !important;
+    color: black; 
+    width: 100%;
+    padding: 15px 30px;
+}
+
+.accordion-button {
+    box-shadow: none !important;
+}
+
+.accordion-header .btn:hover {
+    background-color: #ffb4cb !important;
+}
+
+.accordion-body {
+    padding: 0 70px !important;
+    height: calc(100vh - 310px); 
+    overflow-y: auto;
+}
+
+.accordion-body h1 {
+    margin: 20px 0;
+}
+
+.organization-logo img {
+    display: flex;
+    transform: scale(0.5);
+    height: auto;
+}
+
+.left-text {
+    padding-right: 50px !important
+}
+
+.accordion-body li {
+    font-size: 18px; 
+    font-weight: 200;
+    margin-bottom: 10px;
+}
+
+.accordion-body h6 {
+    font-size: 16px; 
+    font-weight: 300;
+}
+
+.accordion-body ul {
+    margin-top: 50px;
+}
+
+.right-img {
+    height: 100%; /* Makes sure the right column takes full height */
+    overflow: hidden; /* Hide the overflow parts of the image */
+}
+
+.example-image {
+    width: 100%;       /* Fill the entire width of the right column */
+    height: 490px;      /* Fill the entire height of the right column */
+    object-fit: cover; /* Crop the image to cover the area without distortion */
+    border-radius: 10px; /* Optional: add soft rounded corners for aesthetic */
 }

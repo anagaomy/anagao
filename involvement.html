@@ -39,7 +39,7 @@ EMAIL: gaomy@uci.edu
         </header>
 
         <!-- main involvement contents -->
-        <main>
+        <main class="involvement-main-container">
             <section id="involvement-home">
                 <div>
                     <h2 class="page-title" data-aos="fade-up" data-aos-duration="1000">Involvement</h2>
@@ -49,84 +49,102 @@ EMAIL: gaomy@uci.edu
             </section>
 
             <section id="involvement-list">
-                <div class="involvement-header">
-                    <span class="project-button" style="--bs-btn-padding-x: 17px; border-radius: 100%; font-size: 20px;">1</span>
-                    <h3 class="project-subtitle">UCI Chinese Union</h3>
-                </div> 
-                <div class="involvement-header">
-                    <span class="project-button" style="--bs-btn-padding-x: 17px; border-radius: 100%; font-size: 20px;">2</span>
-                    <h3 class="project-subtitle">UCI CUCS</h3>
-                </div>
-                <div class="involvement-header">
-                    <span class="project-button" style="--bs-btn-padding-x: 17px; border-radius: 100%; font-size: 20px;">3</span>
-                    <h3 class="project-subtitle">AUHSD Film Academy</h3>
-                </div> 
-                <div class="involvement-header">
-                    <span class="project-button" style="--bs-btn-padding-x: 17px; border-radius: 100%; font-size: 20px;">4</span>
-                    <h3 class="project-subtitle">Cyberforward</h3>
-                </div>  
-            </section>
-
-            <section id="involvement-list">
-<!-- 
-                <button class="btn btn-primary mt-3" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample1" aria-expanded="false" aria-controls="multiCollapseExample2">UCI Chinese Union</button>
-                <div class="row">
-                    <div class="collapse" id="multiCollapseExample1">
-                        <div class="card card-body">
-                            UCI Chinese Union
-                        </div>
-                    </div>
-                </div>
-
-                <button class="btn btn-primary mt-3" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">UCI CUCS</button>
-                <div class="row">
-                    <div class="collapse" id="multiCollapseExample2">
-                        <div class="card card-body">
-                            UCI CUCS
-                        </div>
-                    </div>
-                </div> -->
-
-                <div class="accordion" id="accordionExample">
-                    <div class="accordion-item rounded-5" style="border-width: 0;">
-                        <h2 class="accordion-header mt-3">
-                            <button class="accordion-button rounded-5" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                Accordion Item #1
+                <div class="accordion" id="accordionExample" style="height: 100vh;">
+                    <div class="accordion-item rounded-5">
+                        <h2 class="accordion-header">
+                            <button class="btn rounded-5 accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                <div class="involvement-header">
+                                    <span class="project-button" style="--bs-btn-padding-x: 17px; border-radius: 100%; font-size: 20px;">1</span>
+                                    <h3 class="project-subtitle">UCI Chinese Union</h3>
+                                </div> 
                             </button>
                         </h2>
                         <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
                             <div class="accordion-body">
-                                <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It’s also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                                <div class="row row-cols-2">
+                                    <div class="col left-text">
+                                        <h1><strong>Marketing Officer</strong></h1>
+                                        <!-- <img class="organization-logo" src="images/involvement/cu.png"> -->
+                                        <div>
+                                            <h6>UC Irvine</h6>
+                                            <h6>June 2023 - present</h6>
+                                            <ul>
+                                                <li>Managed the development and execution of targeted marketing strategies across key social media platforms, including Instagram, TikTok, RedNote and WeChat, to enhance community engagement and promote organizational events.</li>
+                                                <li>Designed engaging content, such as posters, graphics, and videos, to promote events and activities, ensuring alignment with organizational goals and branding.</li>
+                                                <li>Collaborated with team members to organize and execute events, including new student orientation, cultural celebrations, and networking events.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="right-img">
+                                        <img class="example-image" src="images/involvement/UCI-CU-Hangzhou.JPG">
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="accordion-item rounded-5" style="border-width: 0;">
-                        <h2 class="accordion-header mt-3">
-                            <button class="accordion-button collapsed rounded-5" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                Accordion Item #2
+
+                    <div class="accordion-item rounded-5">
+                        <h2 class="accordion-header">
+                            <button class="btn collapsed rounded-5 accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                <div class="involvement-header">
+                                    <span class="project-button" style="--bs-btn-padding-x: 17px; border-radius: 100%; font-size: 20px;">2</span>
+                                    <h3 class="project-subtitle">UCI CUCS</h3>
+                                </div> 
                             </button>
                         </h2>
                         <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                             <div class="accordion-body">
-                                <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It’s also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                                <strong>This is the first item's accordion body.</strong>
+                                <p>some description</p>
+                                <div style="height: 1000px;">
+                                    Scrollable content for item 1...
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="accordion-item rounded-5" style="border-width: 0;">
-                        <h2 class="accordion-header mt-3">
-                            <button class="accordion-button collapsed rounded-5" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                Accordion Item #3
+
+                    <div class="accordion-item rounded-5">
+                        <h2 class="accordion-header">
+                            <button class="btn collapsed rounded-5 accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                <div class="involvement-header">
+                                    <span class="project-button" style="--bs-btn-padding-x: 17px; border-radius: 100%; font-size: 20px;">3</span>
+                                    <h3 class="project-subtitle">AUHSD Film Academy</h3>
+                                </div> 
                             </button>
                         </h2>
                         <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                             <div class="accordion-body">
-                                <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It’s also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                                <strong>This is the first item's accordion body.</strong>
+                                <p>some description</p>
+                                <div style="height: 1000px;">
+                                    Scrollable content for item 1...
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item rounded-5">
+                        <h2 class="accordion-header">
+                            <button class="btn collapsed rounded-5 accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                <div class="involvement-header">
+                                    <span class="project-button" style="--bs-btn-padding-x: 17px; border-radius: 100%; font-size: 20px;">4</span>
+                                    <h3 class="project-subtitle">CyberForward</h3>
+                                </div> 
+                            </button>
+                        </h2>
+                        <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <strong>This is the first item's accordion body.</strong>
+                                <p>some description</p>
+                                <div style="height: 1000px;">
+                                    Scrollable content for item 1...
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
             </section>
+            
         </main>
 
 

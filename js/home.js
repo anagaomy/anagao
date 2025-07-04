@@ -29,14 +29,15 @@ sections.forEach(section => observer1.observe(section));
 const skillContainer = document.querySelector("#work .skill-lists");
 
 const skills = [
+  'E-commerce Marketing',
   'Digital Marketing', 
-  'Content Creation', 
-  'Social Media', 
   'Growth Strategy', 
   'Data Analysis',
-  'Leadership',
-  'Event Management', 
+  'Content Creation', 
   'Customer Acquisition',
+  'Event Management', 
+  'Social Media', 
+  'Leadership',
   'Beauty, Fashion & Trends'
 ];
 
@@ -55,17 +56,17 @@ const yamiWorkDescription = [
   {
     icon: "bi bi-calendar-heart work-icon",
     subtitle: "Brand Promotion",
-    description: "Expanded Yami's presence in the local shopping center and Asian community by organizing both offline and online promotional events, including pop-ups and product sampling experiences, attracting over 100 customers and significantly increasing brand awareness."
+    description: "Expanded Yami's e-commerce presence in the local shopping center and Asian community by organizing both offline and online promotional events, including pop-ups and product sampling experiences, attracting over 100 customers and significantly increasing brand awareness."
   },
   {
     icon: "bi bi-tiktok work-icon",
     subtitle: "Social Media Marketing",
-    description: "Created content-driven campaigns on TikTok, Instagram and RedNote, including unboxing videos, product reviews, and discount promotions, reaching 10,000+ views and growing followers by over 50%."
+    description: "Created content-driven campaigns on TikTok, Instagram and RedNote for Yami's e-commerce platform, featuring unboxing videos, product reviews, and discount promotions, reaching 10,000+ views and growing followers by over 50%."
   },
   {
     icon: "bi bi-people work-icon",
     subtitle: "Growth Strategy",
-    description: "Collected and analyzed user feedback and social media data from TikTok, Instagram, and RedNote to optimize marketing strategies, boost engagement, and drive sales for beauty, snack, and lifestyle products."    
+    description: "Collected and analyzed user feedback and social media data from TikTok, Instagram, and RedNote to optimize e-commerce marketing strategies, boost engagement, and drive sales for beauty, snack, and lifestyle products."    
   }
 ];
 
