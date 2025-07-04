@@ -61,12 +61,12 @@ const involvements = [
         "Independently produced a music video, handling all aspects from storyboarding and scripting to filming and editing, which was nominated for Best Music Video at the AUHSD Student Film Festival."],
     exampleImg: [
         {
-            link: "images/involvement/MV-poster-1.jpg",
-            src: "images/involvement/MV-poster-1.jpg"
+            link: "images/involvement/MV-poster-1.jpeg",
+            src: "images/involvement/MV-poster-1.jpeg"
         },
         {
-            link: "images/involvement/MV-poster-2.jpg",
-            src: "images/involvement/MV-poster-2.jpg"
+            link: "images/involvement/MV-poster-2.jpeg",
+            src: "images/involvement/MV-poster-2.jpeg"
         }
     ],
     expanded: "false"
@@ -149,3 +149,4 @@ exampleImgs.forEach((exampleDiv, index) => {
         exampleDiv.appendChild(exampleContainer);
     });
 });
+
