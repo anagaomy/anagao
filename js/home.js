@@ -296,7 +296,7 @@ skillsData.forEach((skillSet) => {
 
 
 // involvements container 
-const involvemnets = [
+const involvements = [
   // CU
   {
     title: "Marketing Officer",
@@ -318,7 +318,7 @@ const involvemnets = [
     name: "AUHSD Film Academy",
     date: "Aug 2022 - May 2023",
     img: "images/involvement/film-academy.jpg",
-    skillSets: ["Filming", "Directing", "script writing", "Video editing", "Storyboarding"]
+    skillSets: ["Filming", "Directing", "Script writing", "Video editing", "Storyboarding"]
   },
   {
     title: "Cyber Security Trainee",
@@ -331,7 +331,7 @@ const involvemnets = [
 
 
 const involvementContainer = document.querySelector("#involvement .row")
-involvemnets.forEach((involvement, index) => {
+involvements.forEach((involvement, index) => {
   const involvementHTML = `
     <div class="col" onclick="window.location.href='involvement.html'">
       <div class="card h-100" style="background-color: rgba(255, 255, 255, 0.5); border-width: 0; border-radius: 20px" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="${index * 200}">
