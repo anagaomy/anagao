@@ -55,7 +55,7 @@ const involvements = [
     date: "Aug 2022 - May 2023",
     img: "images/involvement/film-academy.jpg",
     skillSets: ["Filming", "Directing", "Script writing", "Video editing", "Storyboarding"],
-    linkedinLink: "",
+    linkedinLink: "https://www.youtube.com/@auhsdfilm",
     description: ["Captured high-quality footage of major events for the AUHSD district, maintaining exceptional visual and audio standards.", 
         "Utilized advanced video editing software to create professional, polished videos that effectively highlighted key moments and narratives from events.", 
         "Independently produced a music video, handling all aspects from storyboarding and scripting to filming and editing, which was nominated for Best Music Video at the AUHSD Student Film Festival."],
@@ -78,7 +78,7 @@ const involvements = [
     date: "May 2022 - Jul 2022",
     img: "images/involvement/cyberforward_logo.jpeg",
     skillSets: ["Third-party risk", "Vulnerability analysis", "Security policy"],
-    linkedinLink: "",
+    linkedinLink: "https://www.linkedin.com/company/cyberforward/posts/?feedView=all",
     description: ["Performed thorough security assessments to identify potential vulnerabilities within company networks and systems", 
         "Conducted detailed analysis of identified vulnerabilities, including risk assessment and mitigation recommendations.",
         "Evaluated the security practices of third-party partners to ensure compliance with industry standards and minimize risk exposure."],
@@ -150,3 +150,15 @@ exampleImgs.forEach((exampleDiv, index) => {
     });
 });
 
+const involvementSkillLists = document.querySelectorAll(".organization-info .skill-lists");
+involvementSkillLists.forEach((listDiv, index) => {
+  const skillSets = involvements[index].skillSets;
+  skillSets.forEach((skill) => {
+    const card = document.createElement('a');
+    card.className = "btn btn-light rounded-5 disabled";
+    card.style = "font-size: 13px; border-width: 0; margin: 0 3px 5px 0; background-color: pink;";
+    card.textContent = skill;
+
+    listDiv.appendChild(card);
+  });
+}); 
