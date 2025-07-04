@@ -1,0 +1,136 @@
+
+/* involvement.html */
+.accordion-item .btn:not(.collapsed) {
+    pointer-events: none;
+}
+.accordion-item .btn.collapsed {
+    pointer-events: auto;
+}
+
+#involvement-list {
+    margin: 0 30px;
+}
+
+.accordion-item {
+    border-width: 1px !important;
+    border-color: black !important;
+    background-color: white !important;
+}
+
+.accordion-header .btn {
+    display: flex;
+    position: relative;
+    background-color: transparent !important;
+    color: black; 
+    width: 100%;
+    padding: 15px 30px;
+}
+
+.accordion-button {
+    box-shadow: none !important;
+}
+
+.accordion-header .btn:hover {
+    background-color: #b4eaff !important;
+    /* background-color: #ffb4cb !important; */
+}
+
+.project-button {
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+    border-color: black;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    padding: 0 17px; 
+    border-radius: 100%; 
+    font-size: 20px;
+}
+
+.project-subtitle {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 300;
+    font-family: "Roboto", "Noto Sans", serif;
+}
+
+.accordion-body {
+    padding: 0 70px !important;
+    height: calc(100vh - 310px); 
+    overflow-y: auto;
+}
+
+.accordion-content {
+    flex-grow: 1;
+    display: flex;
+}
+
+.organization-header {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    align-items: center;
+}
+
+.organization-logo {   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.organization-logo img {
+    max-height: 110px;
+    width: auto;
+    object-fit: contain;
+}
+
+.organization-logo img:hover {
+    transform: scale(1.1);
+    transition-duration: 0.3s;
+}
+
+.left-text {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 0 30px 0 0 !important;
+}
+
+.accordion-body li {
+    font-size: 18px; 
+    font-weight: 200;
+    margin-top: 10px;
+}
+
+.accordion-body h6 {
+    font-size: 16px; 
+    font-weight: 300;
+}
+
+.accordion-body ul {
+    margin-top: auto;
+    margin-bottom: 0;
+}
+
+.right-img {
+    width: 50%;
+    position: relative;
+    display: flex;
+    height: 100%; 
+    overflow: hidden;
+    padding: 0 !important;
+}
+
+.example-image {
+    width: 100%;     
+    height: 490px;    
+    object-fit: contain; 
+    border-radius: 10px; 
+}
+
+.example-image:hover {
+    transform: scale(1.1);
+    transition-duration: 0.3s;
+}
