@@ -34,20 +34,19 @@ body {
 }
 
 
-/* .bg-home { 
-    background: radial-gradient(circle at 50% 7%, rgba(255, 180, 203, 0.85) 100px, transparent 600px), white;
+.bg-home { 
+    background: radial-gradient(circle at 50% 7%, rgba(253, 123, 162, 0.75) 100px, transparent 600px), white;
     transition: background 1s ease; 
     background-color: rgba(255, 255, 255, 0.75);
-} */
+}
 /* .bg-about { background-color: rgba(255, 180, 203, 0.25);} */
 /* .bg-about { background-color: #ffb4cb;} */
 /* .bg-work { background-color: #ffb4cb; } */
 
-.bg-home {
-    /* background: radial-gradient(circle at 50% 7%, rgba(255, 180, 203, 0.8) 100px, transparent 600px), white; */
+/* .bg-home {
     animation: pulseGradient 2s ease-in-out infinite;
     background-size: cover;
-}
+} */
 .bg-about { background-color: black; color: #ffb4cb; }
 .bg-work { background-color: black; color: #ffb4cb; }
 .bg-skills { background-color: black; color: #ffb4cb; }
@@ -61,6 +60,26 @@ body {
 .bg-involvement-list { background-color: #ffb4cb;}
 .bg-work-home { background-color: #ffb4cb; }
 
+
+/* Name animation */
+.title span {
+    padding: 0 8px;
+    display: inline-block;
+    animation: wave 1.5s infinite;
+}
+
+.title span:nth-child(1) { animation-delay: 0s; }
+.title span:nth-child(2) { animation-delay: 0.1s; }
+.title span:nth-child(3) { animation-delay: 0.2s; }
+.title span:nth-child(4) { animation-delay: 0.3s; }
+.title span:nth-child(5) { animation-delay: 0.4s; }
+.title span:nth-child(6) { animation-delay: 0.5s; }
+.title span:nth-child(7) { animation-delay: 0.6s; }
+
+@keyframes wave {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-30px); }
+}
 
 #mainNavbar {
   background-color: transparent;
@@ -683,4 +702,3 @@ body {
 .involvement-img-container {
     text-align: center;
 }
-

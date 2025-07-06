@@ -7,7 +7,7 @@ const involvements = [
     location: "UC Irvine",
     date: "June 2023 - present",
     img: "images/involvement/cu-svg.png",
-    skillSets: ["Content creation", "Design", "Branding", "Team collaboration", "Social media marketing"],
+    skillSets: ["Content Creation", "Design", "Branding", "Team Collaboration", "Social mMdia Marketing"],
     linkedinLink: "https://www.linkedin.com/company/chineseunion/posts/?feedView=all",
     description: ["Managed the development and execution of targeted marketing strategies across key social media platforms, including Instagram, TikTok, RedNote and WeChat, to enhance community engagement and promote organizational events.", 
         "Designed engaging content, such as posters, graphics, and videos, to promote events and activities, ensuring alignment with organizational goals and branding.", 
@@ -31,7 +31,7 @@ const involvements = [
     location: "UC Irvine",
     date: "Sept 2024 - present",
     img: "images/involvement/cucs.jpeg",
-    skillSets: ["Peer support", "Collaboration", "Technical skills", "Networking", "Community engagement"],
+    skillSets: ["Peer Support", "Collaboration", "Technical Skills", "Networking", "Community Engagement"],
     linkedinLink: "https://www.linkedin.com/company/chinese-union-in-computer-science-at-uci/posts/?feedView=all",
     description: ["Participated in regular meetings, coding workshops, and technical events to strengthen programming and problem-solving skills.", 
         "Supported peers in navigating internship and job searches by actively sharing resources, industry insights, and effective networking strategies.", 
@@ -48,13 +48,14 @@ const involvements = [
     ],
     expanded: "false"
   },
+  // film academy
   {
     title: "Student Video Producer",
     name: "AUHSD Film Academy",
     location: "Anaheim, CA",
     date: "Aug 2022 - May 2023",
     img: "images/involvement/film-academy.jpg",
-    skillSets: ["Filming", "Directing", "Script writing", "Video editing", "Storyboarding"],
+    skillSets: ["Filming", "Directing", "Script Writing", "Video Editing", "Storyboarding"],
     linkedinLink: "https://www.youtube.com/@auhsdfilm",
     description: ["Captured high-quality footage of major events for the AUHSD district, maintaining exceptional visual and audio standards.", 
         "Utilized advanced video editing software to create professional, polished videos that effectively highlighted key moments and narratives from events.", 
@@ -69,15 +70,17 @@ const involvements = [
             src: "images/involvement/MV-poster-2.jpeg"
         }
     ],
-    expanded: "false"
+    expanded: "false",
+    youTubeLink: "https://www.youtube.com/embed/CI61At5YPZQ?si=1cbQ-e_jjAwUU4zc&amp;start=161"
   },
+  // cyberforward
   {
     title: "Cyber Security Trainee",
     name: "CyberForward",
     location: "Anaheim, CA",
     date: "May 2022 - Jul 2022",
     img: "images/involvement/cyberforward_logo.jpeg",
-    skillSets: ["Third-party risk", "Vulnerability analysis", "Security policy"],
+    skillSets: ["Third-party Risk", "Vulnerability Analysis", "Security Policy", "Network Security", "Cybersecurity Compliance"],
     linkedinLink: "https://www.linkedin.com/company/cyberforward/posts/?feedView=all",
     description: ["Performed thorough security assessments to identify potential vulnerabilities within company networks and systems", 
         "Conducted detailed analysis of identified vulnerabilities, including risk assessment and mitigation recommendations.",
@@ -117,6 +120,10 @@ accordionContainer.forEach((itemContainer, index) => {
                         </div>
                         <div class="col right-img"></div>
                     </div>
+                    ${involvements[index].youTubeLink ?
+                        `<iframe class="involvement-youtube" src="${involvements[index].youTubeLink}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>` 
+                        : ''
+                    }
                 </div>
             </div>
     `;
