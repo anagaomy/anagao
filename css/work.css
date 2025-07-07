@@ -1,0 +1,98 @@
+.work-page-title {
+    font-weight: 2000;
+    font-size: 70px;
+
+    overflow: hidden;
+    border-right: .15em solid #ffb4cb;
+    white-space: nowrap;
+    letter-spacing: .15em;
+    animation: typing 2s steps(16, end), blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #ffb4cb }
+}
+
+.accordion-item .btn:not(.collapsed) {
+    pointer-events: none;
+}
+
+.accordion-item .btn.collapsed {
+    pointer-events: auto;
+}
+
+#work-1-container {
+    height: calc(100vh - 100px);
+    margin: 0 40px;
+}
+
+.col {
+    width: 100%;
+    height: 100%;
+}
+
+.col .example-img {
+    margin: 8px;
+    width: 100%;
+    height: 710px;
+    object-fit: cover;
+
+    transition: opacity 0.3s ease;
+}
+
+.accordion-item {
+    margin: 8px 0;
+    background-color: #ffb4cb !important;
+    border-width: 0 !important;
+}
+
+.accordion-header .btn {
+    padding: 30px !important;
+    border-width: 0 !important;
+    box-shadow: none !important;
+    background-color: #ffb4cb !important;
+}
+
+.accordion-body {
+    padding: 30px !important;
+    height: calc(100vh - 390px);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.btn h5 {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.job-description-title {
+    padding-bottom: 5px;
+    padding-top: 20px;
+    display: flex;
+    align-items: center; 
+    gap: 10px;
+}
+
+.job-description-title i {
+    font-size: 18px;
+}
+
+.job-description-title p {
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0;
+}
+
+.job-description-text {
+    font-weight: 300 !important;
+    font-size: 16px !important;
+    margin: 0;
+}

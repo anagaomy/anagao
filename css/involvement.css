@@ -1,5 +1,55 @@
+.involvement-page-title {
+    font-weight: 2000;
+    font-size: 70px;
+}
 
-/* involvement.html */
+/* typing animation */
+/* .involvement-page-title {
+    overflow: hidden;
+    border-right: .15em solid #ffb4cb;
+    white-space: nowrap;
+    letter-spacing: .15em;
+    animation: typing 2s steps(10, end), blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #000000 }
+} */
+
+/* wavy animation */
+.involvement-page-title span {
+    display: inline-block;
+    animation: wave 1.5s infinite;
+}
+
+.involvement-page-title span:nth-child(1) { animation-delay: 0s; }
+.involvement-page-title span:nth-child(2) { animation-delay: 0.1s; }
+.involvement-page-title span:nth-child(3) { animation-delay: 0.2s; }
+.involvement-page-title span:nth-child(4) { animation-delay: 0.3s; }
+.involvement-page-title span:nth-child(5) { animation-delay: 0.4s; }
+.involvement-page-title span:nth-child(6) { animation-delay: 0.5s; }
+.involvement-page-title span:nth-child(7) { animation-delay: 0.6s; }
+.involvement-page-title span:nth-child(8) { animation-delay: 0.7s; }
+.involvement-page-title span:nth-child(9) { animation-delay: 0.8s; }
+.involvement-page-title span:nth-child(10) { animation-delay: 0.9s; }
+.involvement-page-title span:nth-child(11) { animation-delay: 1.0s; }
+
+@keyframes wave {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+.involvement-header {
+    display: flex;
+    align-items: center; 
+    gap: 10px;
+}
 
 .accordion-item .btn:not(.collapsed) {
     pointer-events: none;

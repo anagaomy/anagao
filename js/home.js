@@ -61,7 +61,7 @@ const yamiWorkDescription = [
   {
     icon: "bi bi-tiktok work-icon",
     subtitle: "Social Media Marketing",
-    description: "Created content-driven campaigns on TikTok, Instagram and RedNote for Yami's e-commerce platform, featuring unboxing videos, product reviews, and discount promotions, reaching 10,000+ views and growing followers by over 50%."
+    description: "Created content-driven campaigns on TikTok, Instagram and RedNote for Yami's e-commerce platform, featuring unboxing videos, product reviews, and discount promotions, reaching 1,000+ views and growing followers by over 50%."
   },
   {
     icon: "bi bi-people work-icon",
@@ -356,7 +356,7 @@ involvements.forEach((involvement, index) => {
 
 const involvementCardList = document.querySelectorAll("#involvement .card-list");
 involvementCardList.forEach((cardList, index) => {
-  const skillSets = involvemnets[index].skillSets;
+  const skillSets = involvements[index].skillSets;
   skillSets.forEach((skill) => {
     const card = document.createElement('a');
     card.className = "btn btn-light rounded-5 mt-md-2 disabled";
@@ -366,5 +366,4 @@ involvementCardList.forEach((cardList, index) => {
     cardList.appendChild(card);
   });
 }); 
-
 

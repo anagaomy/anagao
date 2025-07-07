@@ -71,7 +71,7 @@ const involvements = [
         }
     ],
     expanded: "false",
-    youTubeLink: "https://www.youtube.com/embed/CI61At5YPZQ?si=1cbQ-e_jjAwUU4zc&amp;start=161"
+    youTubeLink: "https://www.youtube.com/embed/CI61At5YPZQ?start=161"
   },
   // cyberforward
   {
@@ -138,6 +138,24 @@ descriptionLists.forEach((descriptionDiv, index) => {
 
         descriptionDiv.appendChild(descriptionLi);
     });
+});
+
+const accordionBtn = document.querySelectorAll(".accordion-item .accordion-button");
+accordionBtn.forEach((btnDiv, index) => {
+    const involvementHeader = document.createElement("div");
+    involvementHeader.className = "involvement-header";
+
+    const projectBtn = document.createElement("span");
+    projectBtn.className = "project-button";
+    projectBtn.textContent = index + 1;
+
+    const projectSubtitle = document.createElement("h3");
+    projectSubtitle.className = "project-subtitle";
+    projectSubtitle.textContent = involvements[index].name;
+
+    involvementHeader.appendChild(projectBtn);
+    involvementHeader.appendChild(projectSubtitle);
+    btnDiv.appendChild(involvementHeader);
 });
 
 const exampleImgs = document.querySelectorAll(".right-img");
