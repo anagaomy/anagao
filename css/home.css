@@ -194,13 +194,15 @@
     font-size: 35px;
 }
 
-#work .custom-button {
+#work .custom-button, #projects .custom-button {
+    border-width: 1px;
+    border-color: #ffb4cb;
     background-color: #ffb4cb;
 }
 
-#work .custom-button:hover {
-    background-color: white;
-    color: black;
+#work .custom-button:hover, #projects .custom-button:hover {
+    background-color: transparent;
+    color: #ffb4cb;
 }
 
 .yami-description-container {

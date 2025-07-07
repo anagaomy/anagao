@@ -27,9 +27,9 @@
     pointer-events: auto;
 }
 
-#work-1-container {
+#work-1-container, #work-2-container {
     height: calc(100vh - 100px);
-    margin: 0 40px;
+    margin: 100px 40px;
 }
 
 .col {
@@ -130,7 +130,7 @@
     display: flex;
     align-items: center; 
     gap: 15px; 
-    margin: 7px 0;
+    margin: 6px 0;
 }
 
 .skill-list i {
