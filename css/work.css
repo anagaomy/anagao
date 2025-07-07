@@ -40,7 +40,7 @@
 .col .example-img {
     margin: 8px;
     width: 100%;
-    height: 710px;
+    height: 703px;
     object-fit: cover;
 
     transition: opacity 0.3s ease;
@@ -60,7 +60,7 @@
 }
 
 .accordion-body {
-    padding: 30px !important;
+    padding: 30px 50px 30px 40px !important;
     height: calc(100vh - 390px);
     display: flex;
     flex-direction: column;
@@ -71,6 +71,35 @@
     font-size: 16px;
     font-weight: 400;
     margin: 0;
+    padding-left: 10px;
+}
+
+.work-overview-title {
+    margin-bottom: 10px;
+    font-size: 26px;
+    font-weight: 400;
+    font-family: "Roboto", "Noto Sans", serif;
+}
+
+.company-logo {
+    margin: 30px 0;
+}
+
+.company-logo img {
+    width: 10%;
+    height: auto;
+    border-radius: 100%;
+    box-shadow: 2px 4px 6px rgba(152, 152, 152, 0.1);
+}
+
+.company-logo img:hover {
+    transform: scale(1.1);
+    transition-duration: 0.2s;
+}
+
+.overview-description {
+    font-size: 18px;
+    font-weight: 300;
 }
 
 .job-description-title {
@@ -86,13 +115,30 @@
 }
 
 .job-description-title p {
-    font-size: 16px;
+    font-size: 17px;
     font-weight: 500;
     margin: 0;
 }
 
 .job-description-text {
     font-weight: 300 !important;
-    font-size: 16px !important;
+    font-size: 17px !important;
+    margin: 0;
+}
+
+.skill-list {
+    display: flex;
+    align-items: center; 
+    gap: 15px; 
+    margin: 7px 0;
+}
+
+.skill-list i {
+    font-size: 20px;
+}
+
+.skill-list p {
+    font-size: 18px;
+    font-weight: 300;
     margin: 0;
 }

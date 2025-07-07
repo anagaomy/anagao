@@ -4,7 +4,7 @@ const works = [
     {
         overview: {
             company: "YAMI",
-            logoImg: "images/work/yami.png",
+            logoImg: "images/work/Yami/yami.png",
             link: "https://www.linkedin.com/company/yamibuy-com/posts/?feedView=all",
             position: "Student Ambassador",
             duration: "Oct 2024 - present",
@@ -52,7 +52,6 @@ const works = [
 
 ];
 
-
 function changeImage(imgIndex, workIndex) {
     const image = document.querySelector(".example-img");
     // Fade out
@@ -73,7 +72,7 @@ function changeImage(imgIndex, workIndex) {
 
         AOS.refresh();
     }, 200); 
-}
+};
 
 
 function createWorkContainer(work, index) {
@@ -85,16 +84,29 @@ function createWorkContainer(work, index) {
             <div class="col right-text">
                 <div class="accordion" id="accordionExample">
                     <div class="accordion-item rounded-5">
-                        <h2 class="accordion-header">
+                        <div class="accordion-header">
                             <button class="btn rounded-5" type="button" 
                                 data-bs-toggle="collapse" data-bs-target="#collapseOne" 
                                 aria-expanded="true" aria-controls="collapseOne" 
                                 onclick="changeImage(0, ${index})">
                                 <h5>OVERVIEW</h5>
                             </button>
-                        </h2>
+                        </div>
                         <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
                             <div class="accordion-body">
+                                <h3 class="work-overview-title">${work.overview.position}</h3>
+                                <h5 style="font-weight: 300; font-size: 20px; margin-top: 10px;">
+                                    ${work.overview.company}
+                                </h5>
+                                <h5 style="font-weight: 300; font-size: 16px;">
+                                    ${work.overview.duration}
+                                </h5>
+                                <a class="company-logo" href="${work.overview.link}" target="_blank">
+                                    <img src="${work.overview.logoImg}" alt="${work.overview.changeImage} logo">
+                                </a>
+                                <p class="overview-description">
+                                    ${work.overview.description}
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -123,9 +135,7 @@ function createWorkContainer(work, index) {
                             </button>
                         </h2>
                         <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
-                                hey
-                            </div>
+                            <div class="accordion-body skillsets-container"></div>
                         </div>
                     </div>
                 </div>
@@ -138,6 +148,7 @@ works.forEach((work, index) => {
     const workSection = document.querySelector(`#work-${index + 1}-container`);
     workSection.insertAdjacentHTML('beforeend', createWorkContainer(work, index));
 });
+
 
 // create work overview
 const jobDescriptionLists = document.querySelectorAll(".job-description-lists");
@@ -156,3 +167,17 @@ jobDescriptionLists.forEach((descriptionDiv, index) => {
         descriptionDiv.insertAdjacentHTML('beforeend', textHTML);
     });
 });
+
+const skillsetsContainer = document.querySelectorAll(".skillsets-container");
+skillsetsContainer.forEach((skillContainer, index) => {
+    const keySkillsets = works[index].keySkills;
+    keySkillsets.forEach(skill => {
+        const skillHTML = `
+            <div class="skill-list">
+                <i class="bi bi-star-fill"></i>
+                <p>${skill}</p>
+            </div>
+        `;
+        skillContainer.insertAdjacentHTML('beforeend', skillHTML);
+    });
+})
