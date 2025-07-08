@@ -22,7 +22,7 @@ const works = [
             {
                 icon: "bi bi-tiktok work-icon",
                 subtitle: "Social Media Marketing",
-                description: "Created content-driven campaigns on TikTok, Instagram and RedNote for Yami's e-commerce platform, featuring unboxing videos, product reviews, and discount promotions, reaching 1,000+ views and growing followers by over 50%."
+                description: "Created content-driven campaigns on TikTok, Instagram and RedNote for Yami, featuring unboxing videos, product reviews, and discount promotions, reaching 1,000+ views in total and growing followers by over 50%."
             },
             {
                 icon: "bi bi-people work-icon",
