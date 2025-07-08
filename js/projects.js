@@ -2,7 +2,7 @@ const projects = [
     {
         id: "medimateModal",
         title: "🏥 Medimate+", 
-        description: "A healthcare app for doctor appointment, health tracking, and AI-assisted clinic search.",
+        description: "A healthcare web app for doctor appointment, health tracking, and AI-assisted clinic search.",
         about: "Medimate+ is a fullstack healthcare web application integrating APIs that helps users manage medical appointments, track health data, and access location-based clinic recommendations using Google Maps and AI-powered assistance.",
         technologies: ["React", "HTML", "CSS", "Javascript", "Vercel", "Render", "PostgreSQL", "Node.js/Express", "OpenAI API", "Google Map API"],
         youtubeLink: "https://www.youtube.com/embed/HSwBGuq-D-E?autoplay=1&mute=1&controls=0&loop=1",
@@ -49,7 +49,7 @@ const projects = [
         title: "🏃 Runkeeper Tweet Report",
         description: "A tool that analyzes and displays workout summaries from Runkeeper tweets.",
         about: "Runkeeper Tweet Report is a web app that parses and summarizes Runkeeper workout data from JSON tweets using HTML, CSS, JavaScript, and TypeScript.",
-        technologies: ["HTML", "CSS", "Javascript", "Typescript"],
+        technologies: ["HTML", "CSS", "Javascript", "Typescript", "Vega-Lite"],
         youtubeLink: "https://www.youtube.com/embed/c3pllqUbVHw?autoplay=1&mute=1&controls=0&loop=1",        
         githubLink: "https://github.com/anagaomy/a2-tweets-anagaomy",
         webLink: "",
