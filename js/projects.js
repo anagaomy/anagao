@@ -6,7 +6,7 @@ const projects = [
         about: "Medimate+ is a fullstack healthcare web application integrating APIs that helps users manage medical appointments, track health data, and access location-based clinic recommendations using Google Maps and AI-powered assistance.",
         technologies: ["React", "HTML", "CSS", "Javascript", "Vercel", "Render", "PostgreSQL", "Node.js/Express", "OpenAI API", "Google Map API"],
         youtubeLink: "https://www.youtube.com/embed/HSwBGuq-D-E?autoplay=1&mute=1&controls=0&loop=1",
-        githubLink: "https://github.com",
+        githubLink: "https://github.com/XiaomengDong/medimate",
         webLink: "https://medimate-chi.vercel.app/dashboard",
         imgSrc: "images/projects/medimate/dashboard.png",
         figmaLink: "https://embed.figma.com/design/jSpwSZG9TRbkAneMt3d1QP/Medimate--UI-design?node-id=0-1&embed-host=share"
@@ -18,7 +18,7 @@ const projects = [
         about: "Sleep Tracker is cross-platform mobile app to log and review overnight sleep and daytime sleepiness data using Ionic and Node.js",
         technologies: ["Ionic", "HTML", "Scss", "Javascript", "Typescript", "Node.js"], 
         youtubeLink: "https://www.youtube.com/embed/rgn8NQtAel4?autoplay=1&mute=1&controls=0&loop=1",        
-        githubLink: "https://github.com",
+        githubLink: "https://github.com/anagaomy/inf133-sleeptracker",
         webLink: "",
         imgSrc: "images/projects/sleeptracker/sleeptracker-demo.GIF"
     },
@@ -29,7 +29,7 @@ const projects = [
         about: "Spotify Browser is a web app using Angular and Spotify API to browse, search, and display real-time Spotify music data.",
         technologies: ["Angular", "HTML", "CSS", "Typescript", "Javascript", "Spotify API", "Node.js/Express"],
         youtubeLink: "https://www.youtube.com/embed/DWUlPqBxBPc?autoplay=1&mute=1&controls=0&loop=1",        
-        githubLink: "https://github.com",
+        githubLink: "https://github.com/anagaomy/inf133-a3-spotfy-browser",
         webLink: "",
         imgSrc: "images/projects/spotify_browser/spotify-browser-demo.GIF"
     },
@@ -51,7 +51,7 @@ const projects = [
         about: "Runkeeper Tweet Report is a web app that parses and summarizes Runkeeper workout data from JSON tweets using HTML, CSS, JavaScript, and TypeScript.",
         technologies: ["HTML", "CSS", "Javascript", "Typescript"],
         youtubeLink: "https://www.youtube.com/embed/c3pllqUbVHw?autoplay=1&mute=1&controls=0&loop=1",        
-        githubLink: "https://github.com",
+        githubLink: "https://github.com/anagaomy/a2-tweets-anagaomy",
         webLink: "",
         imgSrc: "images/projects/runkeeper/runkeeper-demo.GIF"
     },
@@ -62,7 +62,7 @@ const projects = [
         about: "Redesigned Canvas UI with Figma, developing wireframes, interactive prototypes, and high-fidelity mockups to improve usability.",
         technologies: ["Figma", "Prototype", "Wireframe", "Hi-Fi Mockup"],
         youtubeLink: "https://www.youtube.com/embed/9Imvim1OI8U?autoplay=1&mute=1&controls=0&loop=1",        
-        githubLink: "",
+        githubLink: "https://github.com/anagaomy/ics32_assignment5",
         webLink: "",
         imgSrc: "images/projects/canvas/dashboard.png",
         figmaLink: "https://embed.figma.com/design/6wd6PO9RECCJsKZue1brqR/Canvas-UI-Redesign?node-id=0-1&embed-host=share"
