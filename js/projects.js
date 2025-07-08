@@ -1,7 +1,7 @@
 const projects = [
     {
         id: "medimateModal",
-        title: "🏥 Medimate+", 
+        title: "🩺 Medimate+", 
         description: "A healthcare web app for doctor appointment, health tracking, and AI-assisted clinic search.",
         about: "Medimate+ is a fullstack healthcare web application integrating APIs that helps users manage medical appointments, track health data, and access location-based clinic recommendations using Google Maps and AI-powered assistance.",
         technologies: ["React", "HTML", "CSS", "Javascript", "Vercel", "Render", "PostgreSQL", "Node.js/Express", "OpenAI API", "Google Map API"],

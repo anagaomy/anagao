@@ -50,7 +50,7 @@ const skills = [
   'Event Management', 
   'Social Media', 
   'Leadership',
-  'Beauty, Fashion & Trends'
+  'Beauty, Skincare, Fashion & Trends'
 ];
 
 skills.forEach((skill) => {
@@ -78,7 +78,7 @@ const yamiWorkDescription = [
   {
     icon: "bi bi-people work-icon",
     subtitle: "Growth Strategy",
-    description: "Collected and analyzed user feedback and social media data from TikTok, Instagram, and RedNote to optimize e-commerce marketing strategies, boost engagement, and drive sales for beauty, snack, and lifestyle products."    
+    description: "Collected and analyzed user feedback and social media data from TikTok, Instagram, and RedNote to optimize e-commerce marketing strategies, boost engagement, and drive sales for beauty, skincare, snack, and lifestyle products."    
   }
 ];
 

@@ -27,7 +27,7 @@ const works = [
             {
                 icon: "bi bi-people work-icon",
                 subtitle: "Growth Strategy",
-                description: "Collected and analyzed user feedback and social media data from TikTok, Instagram, and RedNote to optimize e-commerce marketing strategies, boost engagement, and drive sales for beauty, snack, and lifestyle products."    
+                description: "Collected and analyzed user feedback and social media data from TikTok, Instagram, and RedNote to optimize e-commerce marketing strategies, boost engagement, and drive sales for beauty, skincare, snack, and lifestyle products."    
             }
         ],
 
@@ -41,7 +41,7 @@ const works = [
             'Event Management', 
             'Social Media', 
             'Leadership',
-            'Beauty, Fashion & Trends'
+            'Beauty, Skincare, Fashion & Trends'
         ],
 
         exmapleImgs: [
@@ -56,8 +56,8 @@ const works = [
         num: "4",
         overview: {
             company: "Private Kitchen",
-            logoImg: "images/work/tasty-crispy/tasty-crispy-logo.JPG", // Update with your logo or a placeholder image
-            link: "", // Optional: You can link to a social page or leave empty
+            logoImg: "images/work/tasty-crispy/tasty-crispy-logo.JPG",
+            link: "",
             position: "Social Media Manager",
             duration: "Mar 2025 - Present",
             description: "As the Social Media Manager for a private kitchen, I created and managed RedNote content strategies to attract local customers, promote signature dishes, and build an online following from scratch."
