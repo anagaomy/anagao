@@ -3,7 +3,7 @@
 }
 
 #home {
-    height: 95vh;
+    height: 90vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,11 +14,58 @@
     padding-top: 50px;
 }
 
+/* roles animation */
+.chat-bubble-container {
+    position: relative;
+    width: 28%; /* Adjust based on your layout */
+    height: 100vh;
+    overflow: hidden;
+}
+
+.chat-bubble-left, .chat-bubble-right {
+    max-width: 90%;
+    padding: 35px 30px;
+    border-radius: 20px;
+    margin: 10px 0;
+    animation: floatUp 20s linear infinite;
+    position: absolute;
+    opacity: 0;
+}
+
+.chat-bubble-left.left {
+    background-color: rgba(180, 234, 255);
+    backdrop-filter: blur(10px);
+    left: 0;
+}
+
+.chat-bubble-right.right {
+    background-color: rgba(255, 180, 203);
+    backdrop-filter: blur(10px);
+    right: 0;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(800%);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-800%);
+        opacity: 0;
+    }
+}
+
 /* Name animation */
 .title span {
     padding: 0 8px;
     display: inline-block;
-    animation: wave 1.5s infinite;
+    /* animation: wave 1.5s infinite; */
 }
 
 .title span:nth-child(1) { animation-delay: 0s; }
@@ -38,7 +85,7 @@
     /* font-family: "Alfa Slab One", "Anton", "Alfa Slab One", "Abril Fatface", "DM Serif Text", serif; */
     /* font-family: "Poiret One", "Roboto Mono", serif; */
     font-weight: bold;
-    font-size: 100px;
+    font-size: 110px;
     margin: 40px auto;
 }
 
@@ -74,6 +121,13 @@
     text-align: end;
 }
 
+.about-subtitle {
+    font-size: 26px;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 60px;
+}
+
 .about-container {
     padding: auto 80px;
     display: grid;
@@ -90,7 +144,15 @@
 }
 
 .aboutme-text {
+    font-size: 18px;
     margin-bottom: 50px;
+    font-weight: 100 !important;
+}
+
+.aboutme-list {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: 100 !important; 
 }
 
 .about-text-container {
@@ -113,7 +175,6 @@
     border-radius: 20px;
     box-shadow: 2px 4px 6px rgba(152, 152, 152, 0.1);
 }
-
 
 #work, #skills, #projects, #involvement {
     padding-top: 200px;

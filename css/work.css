@@ -67,6 +67,11 @@
     justify-content: flex-end;
 }
 
+.accordion-button {
+    background-color: transparent !important;
+    color: black !important;
+}
+
 .btn h5 {
     font-size: 16px;
     font-weight: 400;

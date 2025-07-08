@@ -1,3 +1,15 @@
+// roles animation
+const leftBubbles = document.querySelectorAll('.chat-bubble-left');
+const rightBubbles = document.querySelectorAll('.chat-bubble-right');
+
+leftBubbles.forEach((bubble, index) => {
+    bubble.style.animationDelay = `${index * 4}s`;
+});
+
+rightBubbles.forEach((bubble, index) => {
+    bubble.style.animationDelay = `${index * 4 + 2}s`;
+});
+
 // IntersectionObserver setup
 const observer1 = new IntersectionObserver((entries) => {
   entries.forEach(entry => {

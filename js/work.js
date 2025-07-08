@@ -137,7 +137,7 @@ function createWorkContainer(work, index) {
                 <div class="accordion" id="${work.id}">
                     <div class="accordion-item rounded-5">
                         <div class="accordion-header">
-                            <button class="btn rounded-5" type="button" 
+                            <button class="btn accordion-button rounded-5" type="button" 
                                 data-bs-toggle="collapse" data-bs-target="#collapse${work.num}" 
                                 aria-expanded="true" aria-controls="collapse${work.num}" 
                                 onclick="changeImage(0, ${index})">
@@ -164,7 +164,7 @@ function createWorkContainer(work, index) {
                     </div>
                     <div class="accordion-item rounded-5">
                         <h2 class="accordion-header">
-                            <button class="btn rounded-5 collapsed" type="button" 
+                            <button class="btn accordion-button rounded-5 collapsed" type="button" 
                                 data-bs-toggle="collapse" data-bs-target="#collapse${work.num + 1}" 
                                 aria-expanded="false" aria-controls="collapse${work.num + 1}"
                                 onclick="changeImage(1, ${index})">
@@ -179,7 +179,7 @@ function createWorkContainer(work, index) {
                     </div>
                     <div class="accordion-item rounded-5">
                         <h2 class="accordion-header">
-                            <button class="btn rounded-5 collapsed" type="button" 
+                            <button class="btn accordion-button rounded-5 collapsed" type="button" 
                                 data-bs-toggle="collapse" data-bs-target="#collapse${work.num + 2}" 
                                 aria-expanded="false" aria-controls="collapse${work.num + 2}"
                                 onclick="changeImage(2, ${index})">
