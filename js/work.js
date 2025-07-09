@@ -22,12 +22,12 @@ const works = [
             {
                 icon: "bi bi-tiktok work-icon",
                 subtitle: "Social Media Marketing",
-                description: "Created content-driven campaigns on TikTok, Instagram and RedNote for Yami, featuring unboxing videos, product reviews, and discount promotions, reaching 1,000+ views in total and growing followers by over 50%."
+                description: "Managed social media account and created content-driven campaigns on TikTok, RedNote and Instagram for YAMI, including unboxing videos, product reviews, and discount promotions, reaching 10,000+ views and growing followers by 45%."
             },
             {
                 icon: "bi bi-people work-icon",
                 subtitle: "Growth Strategy",
-                description: "Collected and analyzed user feedback and social media data from TikTok, Instagram, and RedNote to optimize e-commerce marketing strategies, boost engagement, and drive sales for beauty, skincare, snack, and lifestyle products."    
+                description: "Collected and analyzed user feedback and social media performance metrics from TikTok, RedNote and Instagram to optimize e-commerce marketing strategies, boost engagement, and drive sales for beauty, skincare, snack, and lifestyle products."    
             }
         ],
 
