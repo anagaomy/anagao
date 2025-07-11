@@ -413,3 +413,184 @@
     color: rgb(94, 93, 93);
     font-size: 14px;
 }
+
+
+
+/* Simple Responsive Scaling */
+html {
+  font-size: 16px; /* Base font size */
+}
+
+/* For larger screens (wider than 1440px) */
+@media (min-width: 1441px) { 
+    .home-main-container {
+        width: 1440px;
+        height: auto;
+        margin: 0 auto; 
+        box-sizing: border-box;
+    }
+}
+
+/* For medium screens (1346px to 1440px) - default size */
+@media (min-width: 1346px) and (max-width: 1440px) {
+  /* Default styles apply */
+}
+
+/* For tablets (801px to 1345px) */
+@media (min-width: 801px) and (max-width: 1345px) {
+  html {
+    font-size: 15px;
+  }
+  
+  .home-main-container {
+    margin: 0 auto;
+    padding: 50px 4vw;
+  }
+  
+  #home .title {
+    font-size: 8vw;
+  }
+
+  .about-title {
+    font-size: 150px;
+  }
+  
+  .about-text-container {
+    margin: 80px 10vw;
+  }
+  
+  .Ana-pic img {
+    max-width: 60%;
+  }
+
+  #involvement {
+    margin: 0 auto;
+    padding: 0 auto;
+  }
+
+  #involvement .row {
+    justify-items: center !important;
+    align-items: center !important;
+    width: 612px;
+
+    margin: 0 auto !important;
+    padding: 0 auto !important;
+  }
+
+  #involvement .col {
+    width: 306px;
+    margin-bottom: 20px;
+  }
+}
+
+/* For mobile phones (up to 800px) */
+@media (max-width: 800px) {
+  html {
+    font-size: 14px;
+  }
+  
+  .home-main-container {
+    padding: 40px 5vw;
+  }
+  
+  #home {
+    flex-direction: column;
+  }
+  
+  .chat-bubble-container {
+    width: 100%;
+    height: auto;
+    position: static;
+  }
+  
+  #home .title {
+    font-size: 12vw;
+    margin: 15px auto;
+  }
+  
+  .about-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .Ana-pic {
+    margin: 0 auto 30px;
+    justify-content: center;
+  }
+  
+  .Ana-pic img {
+    max-width: 80%;
+  }
+  
+  .about-title {
+    font-size: 15vw;
+    text-align: center;
+    margin-top: 80px;
+  }
+  
+  .about-text-container {
+    margin: 50px 5vw;
+  }
+  
+  .carousel-wrapper {
+    width: 95%;
+  }
+  
+  .carousel-img {
+    height: 50vh;
+  }
+  
+  #work, #skills, #projects, #involvement {
+    padding-top: 100px;
+  }
+  
+  /* Stack all columns on mobile */
+  .row-cols-2, 
+  .row-cols-3, 
+  .row-cols-4 {
+    grid-template-columns: 1fr !important;
+  }
+  
+  /* involvement list */
+  #involvement .row {
+    display: block;
+    margin: 0 auto;
+    padding: 0 auto;
+    width: 306px;
+  }
+
+  #involvement .col {
+    width: 306px;
+    margin-bottom: 20px;
+  }
+}
+
+/* Very small phones */
+@media (max-width: 480px) {
+  html {
+    font-size: 13px;
+  }
+  
+  .navbar-brand {
+    font-size: 24px !important;
+  }
+  
+  .contact-btn {
+    padding: 6px 12px !important;
+    font-size: 12px !important;
+  }
+  
+  .custom-button {
+    width: 100px;
+  }
+  
+  .about-title {
+    font-size: 18vw;
+  }
+}
+
+/* Disable animations on mobile */
+@media (max-width: 1023px) {
+  .skill {
+    animation: none !important;
+  }
+}

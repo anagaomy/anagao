@@ -245,3 +245,9 @@ body {
 .involvement-img-container {
     text-align: center;
 }
+
+@media (max-width: 1023px) {
+  .contact-list {
+    gap: 40px;
+  }
+}
