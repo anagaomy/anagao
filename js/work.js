@@ -50,10 +50,65 @@ const works = [
             "images/work/Yami/data-analysis.PNG"
         ]
     },
+    // BorderX Media
+    {
+        id: "borderx",
+        num: "2",
+        overview: {
+            company: "BorderX Media",
+            logoImg: "images/work/borderx/borderx-logo.jpeg",
+            link: "https://www.linkedin.com/company/borderxmedia/posts/?feedView=all",
+            position: "Software Engineering Intern",
+            duration: "Jul 2025 - present",
+            description: "Contributed to the development of a full-stack AI-powered Learning Management System (LMS), collaborating with cross-functional teams to align technical features with product and user needs."
+        },
+        
+        keyContributions: [
+            {
+                icon: "bi bi-code-slash work-icon",
+                subtitle: "Frontend Development",
+                description: "Developed dynamic and responsive user interfaces for an AI-powered Learning Management System (LMS) using React and Tailwind CSS, delivering a seamless experience across desktop for students and parents seeking personalized academic guidance and private school/college admissions support."
+            },
+            {
+                icon: "bi bi-diagram-3 work-icon",
+                subtitle: "UI/UX Collaboration",
+                description: "Collaborated with UX designers to iterate on wireframes and prototypes from Figma, enhancing accessibility, usability, and overall aesthetic consistency."
+            },
+            {
+                icon: "bi bi-database work-icon",
+                subtitle: "Backend Integration",
+                description: "Integrated frontend components with backend APIs for real-time student progress tracking using Firebase Firestore, ensuring seamless data synchronization and supporting AI-driven recommendations."    
+            },
+            {
+                icon: "bi bi-people-fill work-icon",
+                subtitle: "Cross-Functional Collaboration",
+                description: "Worked closely with cross-functional teams (backend engineers, product managers, and content strategists) to optimize frontend performance and streamline onboarding workflows, improving engagement metrics."    
+            }
+        ],
+
+        keySkills: [
+            'Full-Stack Development',
+            'React & Tailwind CSS',
+            'UI/UX Collaboration',
+            'Firebase Firestore',
+            'Product Development',
+            'Cross-Functional Communication',
+            'Agile Workflows',
+            'Data-Driven Features',
+            'Problem Solving',
+            'Technical Documentation'
+        ],
+
+        exmapleImgs: [
+            "images/work/borderx/entry.jpg",
+            "images/work/borderx/dashboard.jpg",
+            "images/work/borderx/firebase.png"
+        ]
+    },
     // private kitchen
     {
         id: "private-kitchen",
-        num: "4",
+        num: "3",
         overview: {
             company: "Private Kitchen",
             logoImg: "images/work/tasty-crispy/tasty-crispy-logo.JPG",
@@ -172,7 +227,7 @@ function createWorkContainer(work, index) {
                             </button>
                         </h2>
                         <div id="collapse${work.num + 1}" class="accordion-collapse collapse" data-bs-parent="#${work.id}">
-                            <div class="accordion-body">
+                            <div class="accordion-body scrollable-body">
                                 <div class="job-description-lists"></div>
                             </div>
                         </div>
@@ -187,7 +242,7 @@ function createWorkContainer(work, index) {
                             </button>
                         </h2>
                         <div id="collapse${work.num + 2}" class="accordion-collapse collapse" data-bs-parent="#${work.id}">
-                            <div class="accordion-body skillsets-container"></div>
+                            <div class="accordion-body scrollable-body skillsets-container"></div>
                         </div>
                     </div>
                 </div>
@@ -226,7 +281,7 @@ skillsetsContainer.forEach((skillContainer, index) => {
     keySkillsets.forEach(skill => {
         const skillHTML = `
             <div class="skill-list">
-                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-check-lg"></i>
                 <p>${skill}</p>
             </div>
         `;

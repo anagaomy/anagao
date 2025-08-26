@@ -1,4 +1,5 @@
 const projects = [
+    // INF 124 – Medimate+
     {
         id: "medimateModal",
         title: "🩺 Medimate+", 
@@ -11,6 +12,8 @@ const projects = [
         imgSrc: "images/projects/medimate/dashboard.png",
         figmaLink: "https://embed.figma.com/design/jSpwSZG9TRbkAneMt3d1QP/Medimate--UI-design?node-id=0-1&embed-host=share"
     },
+
+    // INF 133 – Sleep Tracker
     {
         id: "sleeptrackerModal",
         title: "😴 Sleep Tracker",
@@ -22,6 +25,8 @@ const projects = [
         webLink: "",
         imgSrc: "images/projects/sleeptracker/sleeptracker-demo.GIF"
     },
+
+    // INF 133 – Spotify Browser
     {
         id: "spotifyModal",
         title: "🎵 Spotify Browser",
@@ -33,6 +38,8 @@ const projects = [
         webLink: "",
         imgSrc: "images/projects/spotify_browser/spotify-browser-demo.GIF"
     },
+
+    // ICS 32 – Canvas UI Redesign
     {
         id: "chatModal",
         title: "💬 Distributed Social Messenger",
@@ -44,6 +51,8 @@ const projects = [
         webLink: "",
         imgSrc: "images/projects/DSPchat/DSP-chat.jpeg"
     },
+
+    // INF 133 – Runkeeper Tweet Report
     {
         id: "runkeeperModal",
         title: "🏃 Runkeeper Tweet Report",
@@ -55,6 +64,37 @@ const projects = [
         webLink: "",
         imgSrc: "images/projects/runkeeper/runkeeper-demo.GIF"
     },
+
+    // INF 113 – PPM
+    {
+        id: "ppmProject",
+        title: "🐶 Pooch Palace Management System",
+        description: "Requirements engineering and system design project for a dog daycare expanding into retail.",
+        about: "Led end-to-end requirement documentation, stakeholder interviews, and system analysis. Produced detailed UML diagrams, user stories, and functional specifications to align business goals with technical feasibility.",
+        technologies: ["UML", "Use Case Diagrams", "Figma", "Requirement Specifications"],
+        youtubeLink: "",        
+        githubLink: "",
+        webLink: "https://drive.google.com/drive/folders/1FvOSpxDilTec9WvOYqJb91AWzcGGRAus?usp=sharing",
+        imgSrc: "images/projects/inf113/hw5.png",
+        pdfLink: "https://drive.google.com/file/d/1cJxb8sro24rJH8MxJiknaH8a5fl-7Jyy/preview"
+    },
+
+    // Tencent Product Manager Bootcamp
+    {
+        id: "tencentPM",
+        title: "🤖 Tencent AI Search Engine",
+        description: "Designed an AI-powered search engine to improve user discovery and engagement.",
+        about: "Completed a product management bootcamp with Tencent, focusing on user research, product requirement documents, wireframes, and MVP design. Defined KPIs and success metrics for recommendation quality and user engagement.",
+        technologies: ["Product Management", "Figma", "Wireframing", "User Research", "PRD"],
+        youtubeLink: "",        
+        githubLink: "",
+        webLink: "https://drive.google.com/drive/folders/1rBaNlXmXWWwjmohDYzdJxexBzLrV0U2f",
+        imgSrc: "images/projects/tencent/ppt.png",
+        figmaLink: "https://embed.figma.com/design/GeVujJtz8t006U5ShGMAcF/AI%E6%90%9C%E7%B4%A2%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%9E%8B?node-id=0-1&embed-host=share",
+        pdfLink: "https://drive.google.com/file/d/1D8SuPAgYV8TDTmPWkRR_zUxV1rlOdZD0/preview"
+    },
+
+    // INF 131 – UI Design
     {
         id: "canvasModal",
         title: "🎨 Canvas UI Redesign",
@@ -108,9 +148,19 @@ function createModalContent(project) {
                 </div>` 
                 : ''
                 }
+                ${project.pdfLink ? 
+                `<div class="pdf-link">
+                    <a href="${project.pdfLink}" target="_blank">
+                        <i class="bi bi-file-earmark-pdf link-icon"></i>
+                    </a>
+                </div>`
+                : ''}
             </div>
             ${project.figmaLink ? 
                 `<iframe class="figma-links"; style="solid rgba(0, 0, 0, 0.1);" src="${project.figmaLink}" frameborder="0" allowfullscreen></iframe>` 
+                : ''}
+            ${project.pdfLink ? 
+                `<iframe class="pdf-links"; style="solid rgba(0, 0, 0, 0.1);" src="${project.pdfLink}" frameborder="0" allow="autoplay"></iframe>` 
                 : ''}
         </div>    
     `;
