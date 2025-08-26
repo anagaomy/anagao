@@ -120,6 +120,9 @@ function createModalContent(project) {
 function initProjectGrid() {
 const modalContainer = document.querySelector("#projects-main .project-grid");
 
+// Hide grid until images are fully loaded
+modalContainer.classList.add("is-hidden");
+
 const projectImgWrapper = document.querySelectorAll(".project-img-wrapper");
 projectImgWrapper.forEach((wrapper, index) => {
     const overlayHTML = `
@@ -185,6 +188,13 @@ const technologyListsDiv = document.querySelectorAll(".technology-lists");
             percentPosition: true,
             transitionDuration: '0.8s'
         });
+        // Reveal grid after Masonry has been initialized
+        grid.classList.remove('is-hidden');
+        grid.classList.add('is-visible');
+        const loader = document.getElementById('projects-loader');
+        if (loader) {
+            loader.style.display = 'none';
+        }
     });
 }
 

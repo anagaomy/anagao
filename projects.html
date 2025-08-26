@@ -49,7 +49,10 @@ EMAIL: gaomy@uci.edu
             </section>
 
             <section id="projects-main">
-                <div class="project-grid">
+                <div id="projects-loader" class="loader-dots" aria-label="Loading projects" role="status">
+                    <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+                </div>
+                <div class="project-grid is-hidden">
 
                     <button class="project-img-wrapper" type="button" data-bs-toggle="modal" data-bs-target="#medimateModal">
                         <img class="grid-image" src="images/projects/medimate/dashboard.png">
@@ -114,17 +117,6 @@ EMAIL: gaomy@uci.edu
             AOS.init();
         </script>
         <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
-        <script>
-            document.addEventListener('DOMContentLoaded', function () {
-                var grid = document.querySelector('.project-grid');
-                var msnry = new Masonry(grid, {
-                    itemSelector: '.project-img-wrapper',
-                    columnWidth: '.project-img-wrapper',
-                    gutter: 20,
-                    percentPosition: true
-                });
-            });
-        </script>
         <script src="js/main.js"></script>
         <script src="js/projects.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
